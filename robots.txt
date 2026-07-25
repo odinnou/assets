@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /legal/
 
 Sitemap: https://caresse.app/sitemap.xml
