@@ -218,6 +218,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/how-it-works/"/>
   </url>
   <url>
+    <loc>https://caresse.app/jeu-pour-couple/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/jeu-pour-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/couples-game/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/jeu-pour-couple/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/en/couples-game/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/jeu-pour-couple/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/couples-game/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/jeu-pour-couple/"/>
+  </url>
+  <url>
     <loc>https://caresse.app/alternatives/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
