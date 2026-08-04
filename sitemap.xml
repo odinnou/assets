@@ -224,6 +224,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/for-new-couples/"/>
   </url>
   <url>
+    <loc>https://caresse.app/is-caresse-safe/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/is-caresse-safe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/is-caresse-safe/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/is-caresse-safe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/is-caresse-safe/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/en/is-caresse-safe/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/is-caresse-safe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/is-caresse-safe/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/is-caresse-safe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/is-caresse-safe/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/es/is-caresse-safe/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/is-caresse-safe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/is-caresse-safe/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/is-caresse-safe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/is-caresse-safe/"/>
+  </url>
+  <url>
     <loc>https://caresse.app/for-busy-couples/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
