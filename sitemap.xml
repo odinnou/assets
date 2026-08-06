@@ -434,6 +434,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/vs-melba/"/>
   </url>
   <url>
+    <loc>https://caresse.app/vs-magicwave/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/vs-magicwave/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/vs-magicwave/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/vs-magicwave/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/vs-magicwave/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/en/vs-magicwave/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/vs-magicwave/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/vs-magicwave/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/vs-magicwave/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/vs-magicwave/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/es/vs-magicwave/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/vs-magicwave/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/vs-magicwave/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/vs-magicwave/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/vs-magicwave/"/>
+  </url>
+  <url>
     <loc>https://caresse.app/vs-dipsea/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
