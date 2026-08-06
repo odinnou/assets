@@ -23,4 +23,4 @@ Le FR est servi depuis la racine (`/`, `/for-couples/`, ...) et l'EN depuis `/en
 
 ## Déploiement
 
-Aucun build : le contenu de la branche `main` est publié tel quel sur GitHub Pages, à l'adresse `caresse.app` (voir `CNAME`).
+Aucun build : le contenu de la branche `main` est publié tel quel sur GitHub Pages, à l'adresse `caresse.app` (voir `CNAME`)
