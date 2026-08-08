@@ -2,15 +2,19 @@
 
 > **Photo au 2026-08-08** — État constaté sur la branche `main_v2` au commit `c6d7bcb` (`feat(melt): optimize alternative page (#37)`).
 > Site live : https://caresse.app (GitHub Pages, `CNAME` → `caresse.app`).
-> Aucune correction appliquée : ce document est un instantané de départ.
+>
+> **⚠️ Ce document décrit l'état AVANT correction.** Une partie des points a été traitée
+> le même jour — voir la section « Corrections appliquées » en fin de document pour
+> l'état courant.
 
 ## Résumé
 
 La base technique SEO est de très bon niveau : aucun lien interne cassé, aucun JSON-LD invalide, canonicals tous corrects, `<h1>` unique partout, hreflang réciproques à deux exceptions près. Le gisement de valeur est ailleurs :
 
 1. **Le GEO est à zéro** — aucune infrastructure pour les moteurs de réponse IA.
-2. **19 pages sur 86 sont hors sitemap**, dont les 16 pages légales (signal E-E-A-T).
-3. **`/download/`, la page de conversion, est orpheline** (0 lien entrant).
+2. **`/download/`, la page de conversion, est orpheline** (0 lien entrant).
+3. **La home ne porte pas la sémantique de sa catégorie** — elle laisse les pages
+   `/for-*` la porter seules.
 
 ## Périmètre mesuré
 
@@ -18,7 +22,7 @@ La base technique SEO est de très bon niveau : aucun lien interne cassé, aucun
 |---|---|
 | Pages HTML totales | 86 |
 | URLs dans `sitemap.xml` | 67 |
-| Pages hors sitemap | 19 |
+| Pages indexables hors sitemap | 3 (les 16 légales sont `noindex` par choix) |
 | Locales | FR (racine), EN (`/en/`), ES (`/es/`), PT (`/pt/`, partiel) |
 | Blocs JSON-LD invalides | 0 |
 | Liens internes cassés | 0 (sur ~600 `href`/`src`) |
@@ -75,14 +79,25 @@ Sitemap: https://caresse.app/sitemap.xml
 
 **Action.** Autoriser explicitement les crawlers IA dans `robots.txt` ; créer `llms.txt` listant les URLs clés avec une phrase de contexte chacune, plus les 4 piliers énoncés en clair, **limites factuelles incluses**.
 
-### P0-2. 19 pages hors sitemap
+### P0-2. 3 pages hors sitemap
+
+> **Correction apportée à l'analyse initiale.** J'avais compté 19 pages manquantes en
+> incluant les 16 pages légales. Vérification faite, celles-ci sont en
+> `<meta name="robots" content="noindex, nofollow">`, leurs liens sont en
+> `rel="nofollow"`, et le `<head>` des homepages porte le commentaire explicite
+> « *Les pages legal/ ne sont pas référencées ici intentionnellement* ».
+> **Leur exclusion du sitemap est un choix délibéré et cohérent — il n'y a rien à
+> corriger.** Le manque réel se limite aux 3 pages ci-dessous.
 
 Manquent :
 
-- les **16 pages légales** (`/legal/{fr,en,es,pt}/{cgu,cgv,legals,privacy}/`)
 - **`/download/`**, **`/en/download/`**, **`/es/download/`**
 
-Les 16 pages légales sont aussi les **seules du site** dépourvues de `canonical`, `meta description`, `hreflang` **et** JSON-LD. Sur une thématique intime, ces pages sont un signal de confiance (E-E-A-T) non négligeable.
+À noter tout de même : les 16 pages légales sont dépourvues de `canonical`,
+`meta description`, `hreflang` et JSON-LD. C'est sans conséquence tant qu'elles
+restent `noindex`. Si le choix évoluait vers une indexation (les pages légales sont un
+signal E-E-A-T sur une thématique intime), il faudrait compléter leur `<head>` **avant**
+de les ajouter au sitemap.
 
 ### P0-3. `/download/` orpheline — 0 lien entrant
 
@@ -187,19 +202,65 @@ Les quotes type « Manon & Yannick », « Sophie & James » sur les pages satell
 
 ---
 
-## Ordre d'exécution conseillé
+## Corrections appliquées le 2026-08-08
+
+| Réf. | Action | État |
+|---|---|---|
+| P1-6 | Suppression des 36 Mo d'assets morts (`.webm`, `.mp3`, `.m4a`) | ✅ fait (par l'auteur) |
+| P0-1 | `robots.txt` : 15 crawlers IA explicitement autorisés + `Allow: /` | ✅ fait |
+| P0-1 | `llms.txt` créé : définition d'entité, 4 piliers, limites factuelles, 30 liens | ✅ fait |
+| P0-3 | `/download/` + `/support/` ajoutés au `footer-links` de **63 pages** | ✅ fait |
+| P0-5 | `hreflang="es"` + lien ES dans le toggle sur `/blog/` FR et EN | ✅ fait |
+| P0-2 | 3 URLs `/download/` ajoutées au sitemap (70 URLs, XML valide) | ✅ fait |
+| — | Repositionnement sémantique des 3 homepages (cf. ci-dessous) | ✅ fait |
+
+### Repositionnement des homepages (FR / EN / ES)
+
+Objectif : faire de la home le **centre sémantique** du site et la réponse
+incontestable à « qu'est-ce que Caresse ? », sans sacrifier le branding.
+
+- **`<h1>` conservé tel quel** (« Slow down. Feel. Reconnect. ») — c'est du branding
+  qui fonctionne.
+- **Ligne de catégorie ajoutée** sous le H1 (`.hero-category`) : *AI-guided intimacy
+  app for couples & solo exploration*.
+- **Premier paragraphe réécrit** pour porter la chaîne
+  `intimacy app → couples → solo → AI → guided audio → personalized`, avec maillage
+  contextuel vers `/for-couples/` et `/for-solo-exploration/`.
+- **`<title>`, `meta description`, `og:*`, `twitter:*`** alignés sur la catégorie.
+- **`MobileApplication.description` (JSON-LD)** réécrit en définition d'entité courte,
+  factuelle et stable — le format le plus facilement récupérable par un moteur génératif.
+
+Résultats mesurés après application :
+
+| Indicateur | Avant | Après |
+|---|---|---|
+| Liens entrants `/download/` (FR) | 0 | 22 |
+| Liens entrants `/support/` (FR) | 1 | 22 |
+| URLs au sitemap | 67 | 70 |
+| Anomalies hreflang | 1 (`/blog/`) | 0 |
+| JSON-LD invalides | 0 | 0 |
+| Liens internes cassés | 0 | 0 |
+| `<h1>` non unique | 0 | 0 |
+
+Longueurs des balises après réécriture (affichage réel, entités décodées) :
+
+| Locale | `<title>` | `meta description` |
+|---|---|---|
+| FR | 57 | 157 |
+| EN | 62 | 132 |
+| ES | 64 | 150 |
+
+### Reste à faire
 
 | # | Action | Réf. |
 |---|---|---|
-| 1 | `robots.txt` (crawlers IA) + création de `llms.txt` | P0-1 |
-| 2 | Sitemap : +19 URLs, et compléter le `<head>` des pages légales | P0-2 |
-| 3 | Lier `/download/` et `/support/` depuis le footer global | P0-3 |
-| 4 | `hreflang="es"` sur `/blog/` FR + EN | P0-5 |
-| 5 | Basculer les 12 PNG en `.webp` ; supprimer les 36 Mo d'assets morts | P1-7, P1-6 |
-| 6 | `FAQPage` + étoffement de la home | P0-4 |
-| 7 | `HowTo` sur `/how-it-works/` ; `dateModified` sur les `/vs-*` | P2 |
-
-Les points 1 à 5 sont mécaniques et sans risque de régression éditoriale.
+| 1 | Basculer les 12 PNG en `.webp` (fichiers déjà présents) | P1-7 |
+| 2 | `FAQPage` + étoffement de la home (615 mots, 0 question) | P0-4 |
+| 3 | `HowTo` sur `/how-it-works/` ; `dateModified` sur les `/vs-*` | P2 |
+| 4 | Raccourcir les 4 descriptions > 160 car. et le title `/alternatives/` | P2 |
+| 5 | Renforcer le maillage vers les `/vs-*` (8 liens vs 22 pour les `/for-*`) | P2 |
+| 6 | Trancher sur PT : compléter ou assumer | P2 |
+| 7 | CDN devant GitHub Pages si les CWV mobiles coincent | P1-8 |
 
 ## Méthode
 

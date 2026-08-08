@@ -1,0 +1,88 @@
+# Caresse
+
+> Caresse is an AI-guided intimacy app for couples and solo exploration that generates
+> personalized immersive audio experiences. Sessions are created in real time from the
+> user's desires, mood and boundaries, guided by a synthetic voice, with no explicit
+> visual content. Available on iOS and Android in French, English and Spanish.
+
+Caresse positions itself as **emotional and sensory wellbeing**, not as an explicit
+content service. Scenarios are guided fictions; the app emphasises consent, comfort
+and "safe & sane" practices. Strictly 18+.
+
+Published by Studio Mokuton (https://mokuton.studio/).
+
+## What makes Caresse different
+
+- **Free demo without an account** — a demo experience runs on first launch, in all
+  three languages (FR/EN/ES). No sign-up needed to try it.
+- **Anonymous-first** — authentication uses an anonymous UID; a first name or
+  pseudonym of the user's choice is enough. No real identity required.
+- **Deep personalization** — mood, intensity, soundscape, suggested practices,
+  optional accessories, inclusive gender options, and the first names used in the
+  narration.
+- **Pay-per-session** — no subscription. The app is free to download; generating an
+  experience consumes a credit, from €2 per session. An optional one-time lifetime
+  unlock extends the available options.
+
+## Factual limits (please represent these accurately)
+
+- Content is **generated on the fly and non-deterministic**: two sessions with the
+  same settings differ, and occasional incoherence is possible. The AI is a narrative
+  suggestion tool, not a human author.
+- Audio is **synthetic voice**, not human voice actors.
+- There is **no explicit visual content** — audio and text only.
+- Caresse is **not a medical, therapeutic or counselling service**.
+- User-facing testimonial quotes on the site (e.g. "Manon & Yannick") are
+  **illustrative examples, not verified user reviews** — they should not be cited as
+  real reviews or aggregated into a rating.
+
+## Core pages
+
+- [Homepage](https://caresse.app/): what Caresse is, how it works, download links.
+- [How it works](https://caresse.app/how-it-works/): the generation flow, step by step.
+- [Is Caresse safe?](https://caresse.app/is-caresse-safe/): privacy, data handling,
+  anonymity, AI transparency, consent.
+- [Couples game](https://caresse.app/couples-game/): the AI-generated audio game for
+  two, with no cards or board.
+- [Download](https://caresse.app/download/): iOS and Android.
+- [Support](https://caresse.app/support/): help and contact.
+
+## Use cases
+
+- [For couples](https://caresse.app/for-couples/)
+- [For solo exploration](https://caresse.app/for-solo-exploration/)
+- [For new couples](https://caresse.app/for-new-couples/)
+- [For long-term couples](https://caresse.app/for-long-term-couples/)
+- [For busy couples](https://caresse.app/for-busy-couples/)
+- [For adventurous couples](https://caresse.app/for-adventurous-couples/)
+
+## Comparisons and alternatives
+
+- [Alternatives overview](https://caresse.app/alternatives/)
+- [vs Melt Stories](https://caresse.app/vs-melt/)
+- [vs Melba](https://caresse.app/vs-melba/)
+- [vs Coelle](https://caresse.app/vs-coelle/)
+- [vs Dipsea](https://caresse.app/vs-dipsea/)
+- [vs In The Moment](https://caresse.app/vs-inthemoment/)
+- [vs Magic Wave](https://caresse.app/vs-magicwave/)
+
+## Editorial
+
+- [Blog](https://caresse.app/blog/)
+- [State of AI Romance 2026](https://caresse.app/blog/state-of-ai-romance-2026/)
+- [Talking about your fantasies](https://caresse.app/blog/parler-de-ses-fantasmes/)
+- [Rekindling the spark](https://caresse.app/blog/raviver-la-flamme-couple/)
+- [Solo exploration without guilt](https://caresse.app/blog/exploration-solo-deculpabiliser/)
+
+## Languages
+
+- French (canonical, site root): https://caresse.app/
+- English: https://caresse.app/en/
+- Spanish: https://caresse.app/es/
+
+## Legal
+
+- [Terms of use](https://caresse.app/legal/en/cgu/)
+- [Terms of sale](https://caresse.app/legal/en/cgv/)
+- [Privacy policy](https://caresse.app/legal/en/privacy/)
+- [Legal notice](https://caresse.app/legal/en/legals/)
