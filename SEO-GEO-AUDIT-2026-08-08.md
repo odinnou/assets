@@ -318,14 +318,28 @@ est légitime.
 | 4 | Trancher sur PT : compléter ou assumer | P2 |
 | 5 | CDN devant GitHub Pages si les CWV mobiles coincent | P1-8 |
 
-### Découvert en cours de route — non corrigé
+### Localisation ES — solution intermédiaire appliquée
 
-- **Les pages ES servent les captures d'écran FR** : `screens/es/` n'existe pas, les
-  26 références des pages `/es/` pointent vers `screens/fr/`. Un hispanophone voit donc
-  une interface en français. Corriger demande de **produire les assets**, hors périmètre
-  d'une passe SEO.
-- **`og:image` des pages ES** : `og-image-fr.png` est utilisé sur 80 pages, ES incluses.
-  Même sujet — il manque un `og-image-es.png`.
+**Problème constaté** : `screens/es/` n'existe pas. Les pages `/es/` servaient les
+captures FR et l'`og:image` FR — un visiteur hispanophone voyait une interface en
+français.
+
+**Correctif provisoire** : bascule des pages ES sur les assets **anglais**, plus
+lisibles pour un hispanophone que le français.
+
+| Élément | Avant | Après |
+|---|---|---|
+| Captures (`<img>` + `ImageObject`) | `screens/fr/*` (26 réf.) | `screens/en/*` |
+| `og:image` / `twitter:image` | `og-image-fr.png` (36 réf.) | `og-image-en.png` |
+| `image` dans JSON-LD blog | `og-image-fr.png` (2 réf.) | `og-image-en.png` |
+
+Parité vérifiée avant bascule : chaque `screens/fr/N` a son équivalent `screens/en/N`.
+Les `alt` et `og:image:alt` étaient déjà rédigés en espagnol — inchangés.
+FR et EN non touchés.
+
+**Reste à produire** : `screens/es/*` et `og-image-es.png`. Tant qu'ils n'existent pas,
+les captures montrent une interface anglaise sur des pages espagnoles — acceptable en
+transition, mais ce n'est pas l'état cible.
 
 ## Méthode
 
