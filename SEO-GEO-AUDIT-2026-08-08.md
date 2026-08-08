@@ -308,15 +308,70 @@ Les `og:title` / `twitter:title` n'ont pas été alignés de force sur les nouve
 `<title>` : plusieurs pages portaient déjà un titre social distinct et pertinent, ce qui
 est légitime.
 
+### Troisième passe — 2026-08-08
+
+| Réf. | Action | État |
+|---|---|---|
+| P2 | Maillage du cluster comparatif ouvert | ✅ fait |
+| P0-4 | `FAQPage` + étoffement de la home | ✅ fait |
+
+#### Cluster `/vs-*` — le diagnostic initial était incomplet
+
+L'audit disait « 8 liens entrants contre 22 pour les `/for-*` ». En détaillant les
+sources, le problème s'est révélé différent et plus sérieux : les 8 liens venaient
+**uniquement des 5 pages sœurs, de `/alternatives/` et des 2 traductions**. Aucun lien
+depuis la home, le blog, les `/for-*` ou le footer. Le cluster était un **îlot fermé** :
+aucun jus n'y entrait depuis les pages fortes.
+
+Second défaut, invisible dans le comptage : les 6 ancres de `/alternatives/` vers les
+comparatifs étaient toutes « Voir la comparaison → ». Aucun signal sémantique
+exploitable par Google ou un LLM.
+
+Trois correctifs :
+
+1. **18 ancres réécrites** (3 langues × 6) : « Voir la comparaison → » devient
+   « Comparer Caresse et Melba → », etc.
+2. **Section « Comparatifs » sur les 3 homepages**, entre la vidéo et « Pour qui ? » :
+   6 cartes vers les `/vs-*` avec une ligne de différenciation factuelle chacune, plus
+   un lien vers `/alternatives/`.
+3. **Lien contextuel sur les 18 pages `/for-*`**, avant le CTA final, vers
+   `/alternatives/` — aucune de ces pages n'en avait un seul dans son corps.
+
+Le compteur brut de liens entrants ne passe que de 8 à 9 (il dédoublonne par page
+source), mais la structure change de nature : la home ouvre directement sur les
+6 comparatifs, et 18 pages bien maillées alimentent désormais la porte d'entrée du
+cluster.
+
+#### FAQ de la home
+
+6 questions d'entrée de funnel, choisies pour **ne pas dupliquer** les FAQ existantes
+(inventaire préalable des ~90 questions déjà présentes sur les satellites) : ce qu'est
+Caresse, l'essai sans compte, le prix, la différence avec un catalogue audio, les
+langues, solo/duo.
+
+- Rendu en **HTML visible** (structure `.faq` / `.faq-item` reprise des satellites)
+  **et** en `FAQPage` JSON-LD.
+- Cohérence HTML ↔ JSON-LD vérifiée : les 6 questions sont strictement identiques dans
+  les deux, sur les 3 langues — c'est une condition d'éligibilité aux rich results.
+- Les réponses restent factuelles et **mentionnent les limites** (non-déterminisme,
+  incohérences possibles), dans la même logique que `llms.txt`.
+
+| Locale | Mots avant | Mots après | Questions structurées |
+|---|---|---|---|
+| FR | 615 | **992** | 0 → 6 |
+| EN | ~600 | **934** | 0 → 6 |
+| ES | ~600 | **995** | 0 → 6 |
+
+**Le dernier P0 est clos.**
+
 ### Reste à faire
 
 | # | Action | Réf. |
 |---|---|---|
-| 1 | `FAQPage` + étoffement de la home (615 mots, 0 question) | P0-4 |
-| 2 | `HowTo` sur `/how-it-works/` ; `dateModified` sur les `/vs-*` | P2 |
-| 3 | Renforcer le maillage vers les `/vs-*` (8 liens vs 22 pour les `/for-*`) | P2 |
-| 4 | Trancher sur PT : compléter ou assumer | P2 |
-| 5 | CDN devant GitHub Pages si les CWV mobiles coincent | P1-8 |
+| 1 | `HowTo` sur `/how-it-works/` ; `dateModified` sur les `/vs-*` | P2 |
+| 2 | Produire `screens/es/*` et `og-image-es.png` (assets, hors SEO) | — |
+| 3 | Trancher sur PT : compléter ou assumer | P2 |
+| 4 | CDN devant GitHub Pages si les CWV mobiles coincent | P1-8 |
 
 ### Localisation ES — solution intermédiaire appliquée
 

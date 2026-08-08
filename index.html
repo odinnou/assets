@@ -111,6 +111,63 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que Caresse ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Caresse est une application d'intimité guidée par l'IA, pour les couples et l'exploration solo. Elle génère en temps réel des expériences audio immersives, personnalisées selon vos envies, votre humeur et vos limites. Il n'y a aucun contenu visuel explicite : tout repose sur une voix qui vous guide et sur votre imagination."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il créer un compte pour essayer ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Une expérience de démonstration est disponible dès la première ouverture de l'application, sans inscription. Si vous allez plus loin, un identifiant anonyme suffit : un prénom ou un pseudonyme de votre choix, sans identité réelle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte Caresse ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le téléchargement est gratuit et inclut des démos. Ensuite, vous payez à la session, à partir de 2 € : il n'y a pas d'abonnement. Un déverrouillage optionnel en achat unique donne accès à davantage d'options de personnalisation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "En quoi est-ce différent d'un catalogue audio ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un catalogue rejoue des enregistrements existants. Caresse écrit et génère chaque session au moment où vous la lancez : deux sessions configurées de la même manière ne seront jamais identiques. En contrepartie, le contenu étant génératif, de légères incohérences restent possibles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dans quelles langues Caresse est-il disponible ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'application propose des expériences en français, en anglais et en espagnol, démonstration comprise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on l'utiliser seul·e comme à deux ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les deux. Un mode solo et un mode duo sont disponibles, et la personnalisation s'adapte à la configuration choisie, y compris les prénoms utilisés dans la narration. Caresse est réservé aux personnes majeures."
+          }
+        }
+      ]
+    }
+    </script>
+
     <link rel="dns-prefetch" href="https://developer.apple.com">
     <link rel="dns-prefetch" href="https://i.ytimg.com">
     <link rel="dns-prefetch" href="https://play.google.com">
@@ -491,6 +548,48 @@
         .video-facade:focus-visible { outline: 3px solid var(--primary-vibrant); outline-offset: 3px; }
         .video-play svg { width: 26px; height: 26px; fill: #fff; margin-left: 4px; }
 
+        /* ── COMPARE ── */
+        .compare-section { background: var(--grad-soft); text-align: center; }
+        .compare-header { margin-bottom: 48px; }
+        .compare-header .section-sub { margin: 0 auto; max-width: 620px; color: var(--text-secondary); font-size: clamp(1rem, 2vw, 1.15rem); }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            max-width: 1000px;
+            margin: 0 auto 32px;
+        }
+
+        .compare-card {
+            background: var(--surface);
+            border-radius: 14px;
+            padding: 18px 20px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            box-shadow: 0 2px 12px rgba(93,61,140,0.07);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: left;
+        }
+
+        .compare-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 26px rgba(93,61,140,0.15);
+        }
+
+        .compare-card strong { color: var(--text-primary); font-size: 1rem; font-weight: 700; }
+        .compare-card span { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.45; }
+        .compare-all { color: var(--primary-vibrant); font-weight: 600; text-decoration: none; border-bottom: 2px solid rgba(147,97,253,0.3); padding-bottom: 2px; }
+        .compare-all:hover { border-bottom-color: var(--primary-vibrant); }
+
+        .faq { background: var(--grad-soft); }
+        .faq-list { max-width: 700px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 16px; }
+        .faq-item { background: var(--surface); border-radius: 16px; padding: 28px 32px; border: 1px solid rgba(158,123,181,0.1); }
+        .faq-item h3 { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; }
+        .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; }
+
         /* ── AUDIO ── */
         .audio-section {
             background: linear-gradient(135deg, #1A1A2E 0%, #2D1B5E 100%);
@@ -851,6 +950,24 @@
         </div>
     </section>
 
+    <!-- COMPARE -->
+    <section class="compare-section" id="compare">
+        <div class="compare-header">
+            <p class="section-label">Comparatifs</p>
+            <h2 class="section-title">Caresse face aux autres apps.</h2>
+            <p class="section-sub">Démos audio sans compte, sessions générées à vos prénoms, paiement à la session. Comparez point par point.</p>
+        </div>
+        <div class="compare-grid">
+            <a class="compare-card" href="/vs-melba/"><strong>Caresse vs Melba</strong><span>Catalogue validé par des thérapeutes, derrière un compte.</span></a>
+            <a class="compare-card" href="/vs-coelle/"><strong>Caresse vs Coelle</strong><span>Library guidée internationale, sur abonnement.</span></a>
+            <a class="compare-card" href="/vs-dipsea/"><strong>Caresse vs Dipsea</strong><span>Audio scénarisé en anglais, abonnement annuel.</span></a>
+            <a class="compare-card" href="/vs-melt/"><strong>Caresse vs Melt Stories</strong><span>Histoires écrites à lire, pas d'audio généré.</span></a>
+            <a class="compare-card" href="/vs-magicwave/"><strong>Caresse vs MagicWave</strong><span>Audio préenregistré, sans personnalisation.</span></a>
+            <a class="compare-card" href="/vs-inthemoment/"><strong>Caresse vs InTheMoment</strong><span>Méditation et hypnose, autre cas d'usage.</span></a>
+        </div>
+        <a class="compare-all" href="/alternatives/">Voir toutes les alternatives →</a>
+    </section>
+
     <!-- FOR WHO -->
     <section class="forwho">
         <p class="section-label">Pour qui ?</p>
@@ -1018,6 +1135,38 @@
     </section>
 
     <!-- CTA FINAL -->
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <p class="section-label">Questions fréquentes</p>
+        <h2 class="section-title">Tout ce que vous voulez savoir</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>Qu'est-ce que Caresse ?</h3>
+                <p>Caresse est une application d'intimité guidée par l'IA, pour les couples et l'exploration solo. Elle génère en temps réel des expériences audio immersives, personnalisées selon vos envies, votre humeur et vos limites. Il n'y a aucun contenu visuel explicite : tout repose sur une voix qui vous guide et sur votre imagination.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Faut-il créer un compte pour essayer ?</h3>
+                <p>Non. Une expérience de démonstration est disponible dès la première ouverture de l'application, sans inscription. Si vous allez plus loin, un identifiant anonyme suffit : un prénom ou un pseudonyme de votre choix, sans identité réelle.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Combien coûte Caresse ?</h3>
+                <p>Le téléchargement est gratuit et inclut des démos. Ensuite, vous payez à la session, à partir de 2 € : il n'y a pas d'abonnement. Un déverrouillage optionnel en achat unique donne accès à davantage d'options de personnalisation.</p>
+            </div>
+            <div class="faq-item">
+                <h3>En quoi est-ce différent d'un catalogue audio ?</h3>
+                <p>Un catalogue rejoue des enregistrements existants. Caresse écrit et génère chaque session au moment où vous la lancez : deux sessions configurées de la même manière ne seront jamais identiques. En contrepartie, le contenu étant génératif, de légères incohérences restent possibles.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Dans quelles langues Caresse est-il disponible ?</h3>
+                <p>L'application propose des expériences en français, en anglais et en espagnol, démonstration comprise.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Peut-on l'utiliser seul·e comme à deux ?</h3>
+                <p>Les deux. Un mode solo et un mode duo sont disponibles, et la personnalisation s'adapte à la configuration choisie, y compris les prénoms utilisés dans la narration. Caresse est réservé aux personnes majeures.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="cta-section" id="download">
         <p class="section-label">Prêt·e à commencer ?</p>
         <h2 class="section-title">Votre première expérience<br>vous attend.</h2>
