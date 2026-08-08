@@ -250,17 +250,82 @@ Longueurs des balises après réécriture (affichage réel, entités décodées)
 | EN | 62 | 132 |
 | ES | 64 | 150 |
 
+### Seconde passe — 2026-08-08
+
+| Réf. | Action | État |
+|---|---|---|
+| — | Vidéo YouTube + `VideoObject` sur les 3 homepages | ✅ fait |
+| P1-7 | **36 références** PNG → `.webp` sur 27 pages | ✅ fait |
+| P2 | 32 pages : titles > 75 car. et descriptions > 185 car. réécrits | ✅ fait |
+
+#### Vidéo de présentation
+
+Section `#video` insérée entre « 4 étapes » et « Pour qui ? » sur FR / EN / ES.
+
+- **Façade cliquable** (miniature + bouton play, iframe injectée au clic) : 0 iframe au
+  chargement, ~1 Mo de JS YouTube évité, aucun impact CWV.
+- Embed via `youtube-nocookie.com`, cohérent avec le positionnement anonymous-first.
+- `VideoObject` JSON-LD avec les métadonnées **réelles** relevées sur YouTube :
+  `duration` `PT2M41S`, `uploadDate` `2026-07-12`, chaîne `@app.caresse`.
+- Cadre en `aspect-ratio: 4/3` — la vidéo est en 1440×1080, un cadre 16:9 produisait
+  des bandes noires.
+- Vidéo en anglais servie sur les 3 langues (choix assumé) ; libellés de section
+  traduits. `inLanguage: "en"` déclaré honnêtement sur les trois.
+
+#### Images — gain réel supérieur à l'estimation
+
+L'audit initial annonçait « 12 PNG / ~2,5 Mo par page » sur la base d'un échantillon de
+la home FR. Le comptage exhaustif donne **36 références sur 7 écrans distincts et
+27 pages** :
+
+| Page | Images locales | Poids après | Gain vs PNG |
+|---|---|---|---|
+| `/` (FR) | 16 | 1 094 Ko | **−6 867 Ko** |
+| `/en/` | 16 | 1 070 Ko | ≈ idem |
+
+Les `.webp` étaient déjà présents dans le repo — aucune conversion n'a été nécessaire.
+Les `og:image` restent en PNG (support des crawlers sociaux), vérifié.
+
+#### Balises réécrites
+
+32 pages dont le `<title>` dépassait 75 caractères ou la `description` 185. Principe
+retenu : **conserver le différenciateur** (« sans compte », le nom du concurrent
+comparé) et couper les redondances (« Caresse » dupliqué, énumération des trois
+langues, « iOS & Android »). Exemples :
+
+| Page | Avant | Après |
+|---|---|---|
+| `es/for-busy-couples/` | 95 car. | 48 |
+| `alternatives/` | 92 car. | 48 |
+| `vs-magicwave/` | 93 car. | 55 |
+| `blog/state-of-ai-romance-2026/` (desc) | 215 car. | 147 |
+
+Les 38 pages restant entre 60 et 75 caractères ont été **laissées telles quelles** :
+zone grise où Google affiche fréquemment le titre entier, et y toucher risquait de
+diluer des mots-clés qui fonctionnent peut-être déjà.
+
+Les `og:title` / `twitter:title` n'ont pas été alignés de force sur les nouveaux
+`<title>` : plusieurs pages portaient déjà un titre social distinct et pertinent, ce qui
+est légitime.
+
 ### Reste à faire
 
 | # | Action | Réf. |
 |---|---|---|
-| 1 | Basculer les 12 PNG en `.webp` (fichiers déjà présents) | P1-7 |
-| 2 | `FAQPage` + étoffement de la home (615 mots, 0 question) | P0-4 |
-| 3 | `HowTo` sur `/how-it-works/` ; `dateModified` sur les `/vs-*` | P2 |
-| 4 | Raccourcir les 4 descriptions > 160 car. et le title `/alternatives/` | P2 |
-| 5 | Renforcer le maillage vers les `/vs-*` (8 liens vs 22 pour les `/for-*`) | P2 |
-| 6 | Trancher sur PT : compléter ou assumer | P2 |
-| 7 | CDN devant GitHub Pages si les CWV mobiles coincent | P1-8 |
+| 1 | `FAQPage` + étoffement de la home (615 mots, 0 question) | P0-4 |
+| 2 | `HowTo` sur `/how-it-works/` ; `dateModified` sur les `/vs-*` | P2 |
+| 3 | Renforcer le maillage vers les `/vs-*` (8 liens vs 22 pour les `/for-*`) | P2 |
+| 4 | Trancher sur PT : compléter ou assumer | P2 |
+| 5 | CDN devant GitHub Pages si les CWV mobiles coincent | P1-8 |
+
+### Découvert en cours de route — non corrigé
+
+- **Les pages ES servent les captures d'écran FR** : `screens/es/` n'existe pas, les
+  26 références des pages `/es/` pointent vers `screens/fr/`. Un hispanophone voit donc
+  une interface en français. Corriger demande de **produire les assets**, hors périmètre
+  d'une passe SEO.
+- **`og:image` des pages ES** : `og-image-fr.png` est utilisé sur 80 pages, ES incluses.
+  Même sujet — il manque un `og-image-es.png`.
 
 ## Méthode
 
