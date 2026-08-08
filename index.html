@@ -88,7 +88,31 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Découvrir Caresse : des expériences audio personnalisées par IA, pour les couples et en solo",
+      "description": "Présentation de Caresse, l'application d'intimité guidée par l'IA. Chaque session est générée en temps réel selon vos envies, votre dynamique relationnelle, l'intensité choisie et vos limites. Solo ou en couple, sans contenu visuel explicite.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/hLcwrOdqChY/maxresdefault.jpg"
+      ],
+      "uploadDate": "2026-07-12T06:47:42-07:00",
+      "duration": "PT2M41S",
+      "contentUrl": "https://www.youtube.com/watch?v=hLcwrOdqChY",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/hLcwrOdqChY",
+      "inLanguage": "en",
+      "isFamilyFriendly": false,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Studio Mokuton",
+        "url": "https://mokuton.studio/"
+      }
+    }
+    </script>
+
     <link rel="dns-prefetch" href="https://developer.apple.com">
+    <link rel="dns-prefetch" href="https://i.ytimg.com">
     <link rel="dns-prefetch" href="https://play.google.com">
     <link rel="dns-prefetch" href="https://mokuton.studio">
 
@@ -398,6 +422,74 @@
             margin-bottom: 12px;
             font-style: italic;
         }
+
+        /* ── VIDEO ── */
+        .video-section { text-align: center; }
+        .video-header { margin-bottom: 48px; }
+        .video-header .section-sub { margin: 0 auto; max-width: 620px; color: var(--text-secondary); font-size: clamp(1rem, 2vw, 1.15rem); }
+
+        .video-frame {
+            position: relative;
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto;
+            aspect-ratio: 4 / 3;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(93,61,140,0.22);
+            background: #1A1A2E;
+        }
+
+        .video-frame iframe,
+        .video-facade {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-facade {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            cursor: pointer;
+            background: none;
+        }
+
+        .video-facade img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-facade::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(93,61,140,0.35), rgba(26,26,46,0.45));
+        }
+
+        .video-play {
+            position: relative;
+            z-index: 1;
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: var(--grad-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 28px rgba(255,107,157,0.45);
+            transition: transform 0.2s;
+        }
+
+        .video-facade:hover .video-play { transform: scale(1.08); }
+        .video-facade:focus-visible { outline: 3px solid var(--primary-vibrant); outline-offset: 3px; }
+        .video-play svg { width: 26px; height: 26px; fill: #fff; margin-left: 4px; }
 
         /* ── AUDIO ── */
         .audio-section {
@@ -744,6 +836,21 @@
         </div>
     </section>
 
+    <!-- VIDEO -->
+    <section class="video-section" id="video">
+        <div class="video-header">
+            <p class="section-label">La vidéo</p>
+            <h2 class="section-title">Voir Caresse en action.</h2>
+            <p class="section-sub">Deux minutes pour comprendre comment une session est générée, personnalisée et guidée — solo ou à deux.</p>
+        </div>
+        <div class="video-frame">
+            <button type="button" class="video-facade" data-video-id="hLcwrOdqChY" data-video-title="Découvrir Caresse : des expériences audio personnalisées par IA, pour les couples et en solo" aria-label="Lire la vidéo de présentation de Caresse">
+                <img src="https://i.ytimg.com/vi/hLcwrOdqChY/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720">
+                <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
+        </div>
+    </section>
+
     <!-- FOR WHO -->
     <section class="forwho">
         <p class="section-label">Pour qui ?</p>
@@ -1001,6 +1108,20 @@
         }
 
         resetTimer();
+    </script>
+
+    <script>
+        document.querySelectorAll('.video-facade').forEach(function (facade) {
+            facade.addEventListener('click', function () {
+                var id = facade.dataset.videoId;
+                var iframe = document.createElement('iframe');
+                iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+                iframe.title = facade.dataset.videoTitle;
+                iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                iframe.allowFullscreen = true;
+                facade.replaceWith(iframe);
+            });
+        });
     </script>
 </body>
 </html>
