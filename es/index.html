@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ══ SEO PRIMARY ══ -->
-    <title>Caresse — App de intimidad con IA, parejas y solo | Audio guiado</title>
+    <title>Caresse, App de intimidad con IA, parejas y solo | Audio guiado</title>
     <meta name="description" content="App de intimidad guiada por IA, para parejas y exploración en solitario. Audio inmersivo personalizado, sin contenido visual. Gratis en iOS y Android.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Studio Mokuton">
@@ -29,22 +29,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://caresse.app/es/">
     <meta property="og:site_name" content="Caresse">
-    <meta property="og:title" content="Caresse — App de intimidad con IA, parejas y solo">
+    <meta property="og:title" content="Caresse, App de intimidad con IA, parejas y solo">
     <meta property="og:description" content="App de intimidad guiada por IA, para parejas y exploración en solitario. Experiencias de audio inmersivas personalizadas, generadas en tiempo real. Sin contenido visual explícito.">
-    <meta property="og:image" content="https://caresse.app/og-image-fr.png">
+    <meta property="og:image" content="https://caresse.app/og-image-en.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Caresse — experiencia de audio íntima guiada por IA, en iOS y Android">
+    <meta property="og:image:alt" content="Caresse, experiencia de audio íntima guiada por IA, en iOS y Android">
     <meta property="og:locale" content="es_ES">
     <meta property="og:locale:alternate" content="fr_FR">
     <meta property="og:locale:alternate" content="en_US">
 
     <!-- ══ TWITTER CARD ══ -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Caresse — App de intimidad con IA, parejas y solo">
+    <meta name="twitter:title" content="Caresse, App de intimidad con IA, parejas y solo">
     <meta name="twitter:description" content="App de intimidad guiada por IA, para parejas y exploración en solitario. Audio inmersivo personalizado, sin contenido visual explícito.">
-    <meta name="twitter:image" content="https://caresse.app/og-image-fr.png">
-    <meta name="twitter:image:alt" content="Caresse — experiencia de audio íntima guiada por IA">
+    <meta name="twitter:image" content="https://caresse.app/og-image-en.png">
+    <meta name="twitter:image:alt" content="Caresse, experiencia de audio íntima guiada por IA">
 
     <!-- ══ SCHEMA.ORG JSON-LD ══ -->
     <script type="application/ld+json">
@@ -108,6 +108,63 @@
         "name": "Studio Mokuton",
         "url": "https://mokuton.studio/"
       }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es Caresse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Caresse es una app de intimidad guiada por IA, para parejas y exploración en solitario. Genera en tiempo real experiencias de audio inmersivas, personalizadas según tus deseos, tu estado de ánimo y tus límites. No hay contenido visual explícito: todo se basa en una voz que te guía y en tu imaginación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hace falta crear una cuenta para probarla?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Hay una experiencia de demostración disponible al abrir la aplicación por primera vez, sin registro. Si quieres ir más lejos, basta con un identificador anónimo: un nombre o seudónimo de tu elección, sin identidad real."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta Caresse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La descarga es gratuita e incluye demos. Después pagas por sesión, desde 2 €: no hay suscripción. Un desbloqueo opcional de pago único da acceso a más opciones de personalización."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencia de un catálogo de audio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un catálogo reproduce grabaciones ya existentes. Caresse escribe y genera cada sesión en el momento en que la inicias: dos sesiones con la misma configuración nunca serán idénticas. A cambio, al ser contenido generativo, siguen siendo posibles pequeñas incoherencias."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué idiomas está disponible Caresse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La aplicación ofrece experiencias en español, francés e inglés, demostración incluida."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se puede usar en solitario y en pareja?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ambas cosas. Hay modo solo y modo dúo, y la personalización se adapta al modo elegido, incluidos los nombres que se usan en la narración. Caresse es solo para mayores de edad."
+          }
+        }
+      ]
     }
     </script>
 
@@ -491,6 +548,48 @@
         .video-facade:focus-visible { outline: 3px solid var(--primary-vibrant); outline-offset: 3px; }
         .video-play svg { width: 26px; height: 26px; fill: #fff; margin-left: 4px; }
 
+        /* ── COMPARE ── */
+        .compare-section { background: var(--grad-soft); text-align: center; }
+        .compare-header { margin-bottom: 48px; }
+        .compare-header .section-sub { margin: 0 auto; max-width: 620px; color: var(--text-secondary); font-size: clamp(1rem, 2vw, 1.15rem); }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            max-width: 1000px;
+            margin: 0 auto 32px;
+        }
+
+        .compare-card {
+            background: var(--surface);
+            border-radius: 14px;
+            padding: 18px 20px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            box-shadow: 0 2px 12px rgba(93,61,140,0.07);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: left;
+        }
+
+        .compare-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 26px rgba(93,61,140,0.15);
+        }
+
+        .compare-card strong { color: var(--text-primary); font-size: 1rem; font-weight: 700; }
+        .compare-card span { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.45; }
+        .compare-all { color: var(--primary-vibrant); font-weight: 600; text-decoration: none; border-bottom: 2px solid rgba(147,97,253,0.3); padding-bottom: 2px; }
+        .compare-all:hover { border-bottom-color: var(--primary-vibrant); }
+
+        .faq { background: var(--grad-soft); }
+        .faq-list { max-width: 700px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 16px; }
+        .faq-item { background: var(--surface); border-radius: 16px; padding: 28px 32px; border: 1px solid rgba(158,123,181,0.1); }
+        .faq-item h3 { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; }
+        .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; }
+
         /* ── AUDIO ── */
         .audio-section {
             background: linear-gradient(135deg, #1A1A2E 0%, #2D1B5E 100%);
@@ -717,7 +816,7 @@
 
     <!-- HEADER -->
     <header>
-        <a href="/es/" aria-label="Caresse — inicio"><img src="/caresse-logo.svg" class="logo" alt="Caresse, aplicación de audio íntimo guiada por IA"></a>
+        <a href="/es/" aria-label="Caresse, inicio"><img src="/caresse-logo.svg" class="logo" alt="Caresse, aplicación de audio íntimo guiada por IA"></a>
         <div class="header-right">
             <a href="/es/how-it-works/" class="header-link">Cómo funciona</a>
             <a href="/es/couples-game/" class="header-link">Juego para parejas</a>
@@ -738,7 +837,7 @@
 
         <p class="hero-category">La app de intimidad guiada por IA, para parejas y exploración en solitario</p>
 
-        <p>Caresse es una app de intimidad guiada por IA, para <a href="/es/for-couples/">parejas</a> y <a href="/es/for-solo-exploration/">exploración en solitario</a>. Crea experiencias de audio inmersivas personalizadas según tus deseos, tu estado de ánimo y tus límites — en privado, sin contenido visual explícito.</p>
+        <p>Caresse es una app de intimidad guiada por IA, para <a href="/es/for-couples/">parejas</a> y <a href="/es/for-solo-exploration/">exploración en solitario</a>. Crea experiencias de audio inmersivas personalizadas según tus deseos, tu estado de ánimo y tus límites, en privado, sin contenido visual explícito.</p>
         <div class="cta-group">
             <a href="#download" class="cta-pink">
                 <span class="inline">Descargar gratis</span>
@@ -763,16 +862,16 @@
             <div class="phone-carousel-wrap">
                 <div class="phone-carousel" id="phoneCarousel">
                     <div class="phone-carousel-track" id="carouselTrack">
-                        <div class="phone-carousel-slide active"><img src="/screens/fr/01_android_fr.webp" alt="Caresse, pantalla de inicio"></div>
-                        <div class="phone-carousel-slide"><img src="/screens/fr/02_android_fr.webp" alt="Caresse, configuración de sesión" loading="lazy"></div>
-                        <div class="phone-carousel-slide"><img src="/screens/fr/03_android_fr.webp" alt="Caresse, personalización del perfil" loading="lazy"></div>
-                        <div class="phone-carousel-slide"><img src="/screens/fr/04_android_fr.webp" alt="Caresse, elección del modo" loading="lazy"></div>
-                        <div class="phone-carousel-slide"><img src="/screens/fr/05_android_fr.webp" alt="Caresse, participantes" loading="lazy"></div>
-                        <div class="phone-carousel-slide"><img src="/screens/fr/06_android_fr.webp" alt="Caresse, preferencias" loading="lazy"></div>
-                        <div class="phone-carousel-slide"><img src="/screens/fr/07_android_fr.webp" alt="Caresse, deseos y configuración" loading="lazy"></div>
-                        <div class="phone-carousel-slide"><img src="/screens/fr/08_android_fr.webp" alt="Caresse, intensidad y ambiente" loading="lazy"></div>
-                        <div class="phone-carousel-slide"><img src="/screens/fr/09_android_fr.webp" alt="Caresse, experiencia lista" loading="lazy"></div>
-                        <div class="phone-carousel-slide"><img src="/screens/fr/10_android_fr.webp" alt="Caresse, sesión de audio" loading="lazy"></div>
+                        <div class="phone-carousel-slide active"><img src="/screens/en/01_android_en.webp" alt="Caresse, pantalla de inicio"></div>
+                        <div class="phone-carousel-slide"><img src="/screens/en/02_android_en.webp" alt="Caresse, configuración de sesión" loading="lazy"></div>
+                        <div class="phone-carousel-slide"><img src="/screens/en/03_android_en.webp" alt="Caresse, personalización del perfil" loading="lazy"></div>
+                        <div class="phone-carousel-slide"><img src="/screens/en/04_android_en.webp" alt="Caresse, elección del modo" loading="lazy"></div>
+                        <div class="phone-carousel-slide"><img src="/screens/en/05_android_en.webp" alt="Caresse, participantes" loading="lazy"></div>
+                        <div class="phone-carousel-slide"><img src="/screens/en/06_android_en.webp" alt="Caresse, preferencias" loading="lazy"></div>
+                        <div class="phone-carousel-slide"><img src="/screens/en/07_android_en.webp" alt="Caresse, deseos y configuración" loading="lazy"></div>
+                        <div class="phone-carousel-slide"><img src="/screens/en/08_android_en.webp" alt="Caresse, intensidad y ambiente" loading="lazy"></div>
+                        <div class="phone-carousel-slide"><img src="/screens/en/09_android_en.webp" alt="Caresse, experiencia lista" loading="lazy"></div>
+                        <div class="phone-carousel-slide"><img src="/screens/en/10_android_en.webp" alt="Caresse, sesión de audio" loading="lazy"></div>
                     </div>
                 </div>
                 <div class="carousel-dots" id="carouselDots"></div>
@@ -791,7 +890,7 @@
         <div class="steps-grid">
             <div class="step-card">
                 <div class="step-screen">
-                    <img src="/screens/fr/05_android_fr.png" loading="lazy" alt="Quién participa, elige solo o dúo, personaliza tus perfiles">
+                    <img src="/screens/en/05_android_en.webp" loading="lazy" alt="Quién participa, elige solo o dúo, personaliza tus perfiles">
                 </div>
                 <div class="step-body">
                     <p class="step-num">Paso 01</p>
@@ -802,7 +901,7 @@
 
             <div class="step-card">
                 <div class="step-screen">
-                    <img src="/screens/fr/07_android_fr.png" loading="lazy" alt="Tus deseos, accesorios, prácticas, ambiente, personalización completa">
+                    <img src="/screens/en/07_android_en.webp" loading="lazy" alt="Tus deseos, accesorios, prácticas, ambiente, personalización completa">
                 </div>
                 <div class="step-body">
                     <p class="step-num">Paso 02</p>
@@ -813,7 +912,7 @@
 
             <div class="step-card">
                 <div class="step-screen">
-                    <img src="/screens/fr/08_android_fr.png" loading="lazy" alt="Intensidad y ambiente musical, romántico, explícito, zen, naturaleza">
+                    <img src="/screens/en/08_android_en.webp" loading="lazy" alt="Intensidad y ambiente musical, romántico, explícito, zen, naturaleza">
                 </div>
                 <div class="step-body">
                     <p class="step-num">Paso 03</p>
@@ -824,7 +923,7 @@
 
             <div class="step-card">
                 <div class="step-screen">
-                    <img src="/screens/fr/09_android_fr.png" loading="lazy" alt="Experiencia lista, generada a medida por la IA, notificación en cuanto está lista">
+                    <img src="/screens/en/09_android_en.webp" loading="lazy" alt="Experiencia lista, generada a medida por la IA, notificación en cuanto está lista">
                 </div>
                 <div class="step-body">
                     <p class="step-num">Paso 04</p>
@@ -840,7 +939,7 @@
         <div class="video-header">
             <p class="section-label">El vídeo</p>
             <h2 class="section-title">Ver Caresse en acción.</h2>
-            <p class="section-sub">Dos minutos para entender cómo se genera, se personaliza y se guía una sesión — en solitario o en pareja.</p>
+            <p class="section-sub">Dos minutos para entender cómo se genera, se personaliza y se guía una sesión, en solitario o en pareja.</p>
         </div>
         <div class="video-frame">
             <button type="button" class="video-facade" data-video-id="hLcwrOdqChY" data-video-title="Descubre Caresse: experiencias de audio personalizadas con IA, para parejas y en solitario" aria-label="Reproducir el vídeo de presentación de Caresse">
@@ -848,6 +947,25 @@
                 <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
             </button>
         </div>
+    </section>
+
+    <!-- COMPARE -->
+    <section class="compare-section" id="compare">
+        <div class="compare-header">
+            <p class="section-label">Comparativas</p>
+            <h2 class="section-title">Caresse frente a las demás apps.</h2>
+            <p class="section-sub">Demos de audio sin cuenta, sesiones generadas con vuestros nombres, pago por sesión. Compara punto por punto.</p>
+        </div>
+        <div class="compare-grid">
+            <a class="compare-card" href="/es/vs-melba/"><strong>Caresse vs Melba</strong><span>Catálogo validado por terapeutas, tras una cuenta.</span></a>
+            <a class="compare-card" href="/es/vs-coelle/"><strong>Caresse vs Coelle</strong><span>Library guiada internacional, por suscripción.</span></a>
+            <a class="compare-card" href="/es/vs-dipsea/"><strong>Caresse vs Dipsea</strong><span>Audio con guion en inglés, suscripción anual.</span></a>
+            <a class="compare-card" href="/es/vs-melt/"><strong>Caresse vs Melt Stories</strong><span>Historias escritas para leer, sin audio generado.</span></a>
+            <a class="compare-card" href="/es/vs-magicwave/"><strong>Caresse vs MagicWave</strong><span>Audio pregrabado, sin personalización.</span></a>
+            <a class="compare-card" href="/es/vs-inthemoment/"><strong>Caresse vs InTheMoment</strong><span>Meditación e hipnosis, otro caso de uso.</span></a>
+            <a class="compare-card" href="/es/vs-bonded/"><strong>Caresse vs Bonded</strong><span>Chat escrito que espera tus respuestas, vs audio que se desarrolla solo.</span></a>
+        </div>
+        <a class="compare-all" href="/es/alternatives/">Ver todas las alternativas →</a>
     </section>
 
     <!-- FOR WHO -->
@@ -1017,6 +1135,38 @@
     </section>
 
     <!-- CTA FINAL -->
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <p class="section-label">Preguntas frecuentes</p>
+        <h2 class="section-title">Todo lo que quieres saber</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>¿Qué es Caresse?</h3>
+                <p>Caresse es una app de intimidad guiada por IA, para parejas y exploración en solitario. Genera en tiempo real experiencias de audio inmersivas, personalizadas según tus deseos, tu estado de ánimo y tus límites. No hay contenido visual explícito: todo se basa en una voz que te guía y en tu imaginación.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Hace falta crear una cuenta para probarla?</h3>
+                <p>No. Hay una experiencia de demostración disponible al abrir la aplicación por primera vez, sin registro. Si quieres ir más lejos, basta con un identificador anónimo: un nombre o seudónimo de tu elección, sin identidad real.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Cuánto cuesta Caresse?</h3>
+                <p>La descarga es gratuita e incluye demos. Después pagas por sesión, desde 2 €: no hay suscripción. Un desbloqueo opcional de pago único da acceso a más opciones de personalización.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿En qué se diferencia de un catálogo de audio?</h3>
+                <p>Un catálogo reproduce grabaciones ya existentes. Caresse escribe y genera cada sesión en el momento en que la inicias: dos sesiones con la misma configuración nunca serán idénticas. A cambio, al ser contenido generativo, siguen siendo posibles pequeñas incoherencias.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿En qué idiomas está disponible Caresse?</h3>
+                <p>La aplicación ofrece experiencias en español, francés e inglés, demostración incluida.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Se puede usar en solitario y en pareja?</h3>
+                <p>Ambas cosas. Hay modo solo y modo dúo, y la personalización se adapta al modo elegido, incluidos los nombres que se usan en la narración. Caresse es solo para mayores de edad.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="cta-section" id="download">
         <p class="section-label">¿List@ para empezar?</p>
         <h2 class="section-title">Tu primera experiencia<br>te espera.</h2>
@@ -1036,7 +1186,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <a href="/es/" aria-label="Caresse — inicio"><img src="/caresse-logo.svg" style="height:28px;" alt="Caresse"></a>
+        <a href="/es/" aria-label="Caresse, inicio"><img src="/caresse-logo.svg" style="height:28px;" alt="Caresse"></a>
         <nav aria-label="Casos de uso" style="display:flex;gap:6px 16px;flex-wrap:wrap;justify-content:center;max-width:720px;">
             <a href="/es/how-it-works/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;transition:0.2s;" onmouseover="this.style.color='var(--primary)';this.style.background='rgba(93,61,140,0.06)'" onmouseout="this.style.color='var(--text-secondary)';this.style.background='transparent'"><span class="inline">Cómo funciona</span></a>
             <a href="/es/couples-game/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;transition:0.2s;" onmouseover="this.style.color='var(--primary)';this.style.background='rgba(93,61,140,0.06)'" onmouseout="this.style.color='var(--text-secondary)';this.style.background='transparent'"><span class="inline">Juego para parejas</span></a>

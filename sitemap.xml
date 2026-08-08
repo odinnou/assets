@@ -699,4 +699,34 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/download/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/download/"/>
   </url>
+  <url>
+    <loc>https://caresse.app/vs-bonded/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/vs-bonded/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/vs-bonded/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/vs-bonded/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/vs-bonded/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/en/vs-bonded/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/vs-bonded/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/vs-bonded/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/vs-bonded/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/vs-bonded/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/es/vs-bonded/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/vs-bonded/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/vs-bonded/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/vs-bonded/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/vs-bonded/"/>
+  </url>
 </urlset>

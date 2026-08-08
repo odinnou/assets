@@ -250,17 +250,151 @@ Longueurs des balises après réécriture (affichage réel, entités décodées)
 | EN | 62 | 132 |
 | ES | 64 | 150 |
 
+### Seconde passe — 2026-08-08
+
+| Réf. | Action | État |
+|---|---|---|
+| — | Vidéo YouTube + `VideoObject` sur les 3 homepages | ✅ fait |
+| P1-7 | **36 références** PNG → `.webp` sur 27 pages | ✅ fait |
+| P2 | 32 pages : titles > 75 car. et descriptions > 185 car. réécrits | ✅ fait |
+
+#### Vidéo de présentation
+
+Section `#video` insérée entre « 4 étapes » et « Pour qui ? » sur FR / EN / ES.
+
+- **Façade cliquable** (miniature + bouton play, iframe injectée au clic) : 0 iframe au
+  chargement, ~1 Mo de JS YouTube évité, aucun impact CWV.
+- Embed via `youtube-nocookie.com`, cohérent avec le positionnement anonymous-first.
+- `VideoObject` JSON-LD avec les métadonnées **réelles** relevées sur YouTube :
+  `duration` `PT2M41S`, `uploadDate` `2026-07-12`, chaîne `@app.caresse`.
+- Cadre en `aspect-ratio: 4/3` — la vidéo est en 1440×1080, un cadre 16:9 produisait
+  des bandes noires.
+- Vidéo en anglais servie sur les 3 langues (choix assumé) ; libellés de section
+  traduits. `inLanguage: "en"` déclaré honnêtement sur les trois.
+
+#### Images — gain réel supérieur à l'estimation
+
+L'audit initial annonçait « 12 PNG / ~2,5 Mo par page » sur la base d'un échantillon de
+la home FR. Le comptage exhaustif donne **36 références sur 7 écrans distincts et
+27 pages** :
+
+| Page | Images locales | Poids après | Gain vs PNG |
+|---|---|---|---|
+| `/` (FR) | 16 | 1 094 Ko | **−6 867 Ko** |
+| `/en/` | 16 | 1 070 Ko | ≈ idem |
+
+Les `.webp` étaient déjà présents dans le repo — aucune conversion n'a été nécessaire.
+Les `og:image` restent en PNG (support des crawlers sociaux), vérifié.
+
+#### Balises réécrites
+
+32 pages dont le `<title>` dépassait 75 caractères ou la `description` 185. Principe
+retenu : **conserver le différenciateur** (« sans compte », le nom du concurrent
+comparé) et couper les redondances (« Caresse » dupliqué, énumération des trois
+langues, « iOS & Android »). Exemples :
+
+| Page | Avant | Après |
+|---|---|---|
+| `es/for-busy-couples/` | 95 car. | 48 |
+| `alternatives/` | 92 car. | 48 |
+| `vs-magicwave/` | 93 car. | 55 |
+| `blog/state-of-ai-romance-2026/` (desc) | 215 car. | 147 |
+
+Les 38 pages restant entre 60 et 75 caractères ont été **laissées telles quelles** :
+zone grise où Google affiche fréquemment le titre entier, et y toucher risquait de
+diluer des mots-clés qui fonctionnent peut-être déjà.
+
+Les `og:title` / `twitter:title` n'ont pas été alignés de force sur les nouveaux
+`<title>` : plusieurs pages portaient déjà un titre social distinct et pertinent, ce qui
+est légitime.
+
+### Troisième passe — 2026-08-08
+
+| Réf. | Action | État |
+|---|---|---|
+| P2 | Maillage du cluster comparatif ouvert | ✅ fait |
+| P0-4 | `FAQPage` + étoffement de la home | ✅ fait |
+
+#### Cluster `/vs-*` — le diagnostic initial était incomplet
+
+L'audit disait « 8 liens entrants contre 22 pour les `/for-*` ». En détaillant les
+sources, le problème s'est révélé différent et plus sérieux : les 8 liens venaient
+**uniquement des 5 pages sœurs, de `/alternatives/` et des 2 traductions**. Aucun lien
+depuis la home, le blog, les `/for-*` ou le footer. Le cluster était un **îlot fermé** :
+aucun jus n'y entrait depuis les pages fortes.
+
+Second défaut, invisible dans le comptage : les 6 ancres de `/alternatives/` vers les
+comparatifs étaient toutes « Voir la comparaison → ». Aucun signal sémantique
+exploitable par Google ou un LLM.
+
+Trois correctifs :
+
+1. **18 ancres réécrites** (3 langues × 6) : « Voir la comparaison → » devient
+   « Comparer Caresse et Melba → », etc.
+2. **Section « Comparatifs » sur les 3 homepages**, entre la vidéo et « Pour qui ? » :
+   6 cartes vers les `/vs-*` avec une ligne de différenciation factuelle chacune, plus
+   un lien vers `/alternatives/`.
+3. **Lien contextuel sur les 18 pages `/for-*`**, avant le CTA final, vers
+   `/alternatives/` — aucune de ces pages n'en avait un seul dans son corps.
+
+Le compteur brut de liens entrants ne passe que de 8 à 9 (il dédoublonne par page
+source), mais la structure change de nature : la home ouvre directement sur les
+6 comparatifs, et 18 pages bien maillées alimentent désormais la porte d'entrée du
+cluster.
+
+#### FAQ de la home
+
+6 questions d'entrée de funnel, choisies pour **ne pas dupliquer** les FAQ existantes
+(inventaire préalable des ~90 questions déjà présentes sur les satellites) : ce qu'est
+Caresse, l'essai sans compte, le prix, la différence avec un catalogue audio, les
+langues, solo/duo.
+
+- Rendu en **HTML visible** (structure `.faq` / `.faq-item` reprise des satellites)
+  **et** en `FAQPage` JSON-LD.
+- Cohérence HTML ↔ JSON-LD vérifiée : les 6 questions sont strictement identiques dans
+  les deux, sur les 3 langues — c'est une condition d'éligibilité aux rich results.
+- Les réponses restent factuelles et **mentionnent les limites** (non-déterminisme,
+  incohérences possibles), dans la même logique que `llms.txt`.
+
+| Locale | Mots avant | Mots après | Questions structurées |
+|---|---|---|---|
+| FR | 615 | **992** | 0 → 6 |
+| EN | ~600 | **934** | 0 → 6 |
+| ES | ~600 | **995** | 0 → 6 |
+
+**Le dernier P0 est clos.**
+
 ### Reste à faire
 
 | # | Action | Réf. |
 |---|---|---|
-| 1 | Basculer les 12 PNG en `.webp` (fichiers déjà présents) | P1-7 |
-| 2 | `FAQPage` + étoffement de la home (615 mots, 0 question) | P0-4 |
-| 3 | `HowTo` sur `/how-it-works/` ; `dateModified` sur les `/vs-*` | P2 |
-| 4 | Raccourcir les 4 descriptions > 160 car. et le title `/alternatives/` | P2 |
-| 5 | Renforcer le maillage vers les `/vs-*` (8 liens vs 22 pour les `/for-*`) | P2 |
-| 6 | Trancher sur PT : compléter ou assumer | P2 |
-| 7 | CDN devant GitHub Pages si les CWV mobiles coincent | P1-8 |
+| 1 | `HowTo` sur `/how-it-works/` ; `dateModified` sur les `/vs-*` | P2 |
+| 2 | Produire `screens/es/*` et `og-image-es.png` (assets, hors SEO) | — |
+| 3 | Trancher sur PT : compléter ou assumer | P2 |
+| 4 | CDN devant GitHub Pages si les CWV mobiles coincent | P1-8 |
+
+### Localisation ES — solution intermédiaire appliquée
+
+**Problème constaté** : `screens/es/` n'existe pas. Les pages `/es/` servaient les
+captures FR et l'`og:image` FR — un visiteur hispanophone voyait une interface en
+français.
+
+**Correctif provisoire** : bascule des pages ES sur les assets **anglais**, plus
+lisibles pour un hispanophone que le français.
+
+| Élément | Avant | Après |
+|---|---|---|
+| Captures (`<img>` + `ImageObject`) | `screens/fr/*` (26 réf.) | `screens/en/*` |
+| `og:image` / `twitter:image` | `og-image-fr.png` (36 réf.) | `og-image-en.png` |
+| `image` dans JSON-LD blog | `og-image-fr.png` (2 réf.) | `og-image-en.png` |
+
+Parité vérifiée avant bascule : chaque `screens/fr/N` a son équivalent `screens/en/N`.
+Les `alt` et `og:image:alt` étaient déjà rédigés en espagnol — inchangés.
+FR et EN non touchés.
+
+**Reste à produire** : `screens/es/*` et `og-image-es.png`. Tant qu'ils n'existent pas,
+les captures montrent une interface anglaise sur des pages espagnoles — acceptable en
+transition, mais ce n'est pas l'état cible.
 
 ## Méthode
 
