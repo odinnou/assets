@@ -33,21 +33,63 @@
   </url>
   <url>
     <loc>https://caresse.app/blog/</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/blog/"/>
   </url>
   <url>
     <loc>https://caresse.app/en/blog/</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/blog/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/es/blog/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/blog/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/blog/state-of-ai-romance-2026/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/blog/state-of-ai-romance-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/blog/state-of-ai-romance-2026/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/blog/state-of-ai-romance-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/en/blog/state-of-ai-romance-2026/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/en/blog/state-of-ai-romance-2026/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/blog/state-of-ai-romance-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/blog/state-of-ai-romance-2026/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/blog/state-of-ai-romance-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/en/blog/state-of-ai-romance-2026/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/es/blog/state-of-ai-romance-2026/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/blog/state-of-ai-romance-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/blog/state-of-ai-romance-2026/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/blog/state-of-ai-romance-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/en/blog/state-of-ai-romance-2026/"/>
   </url>
   <url>
     <loc>https://caresse.app/blog/raviver-la-flamme-couple/</loc>
