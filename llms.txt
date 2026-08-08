@@ -65,6 +65,7 @@ Published by Studio Mokuton (https://mokuton.studio/).
 - [vs Dipsea](https://caresse.app/vs-dipsea/)
 - [vs In The Moment](https://caresse.app/vs-inthemoment/)
 - [vs Magic Wave](https://caresse.app/vs-magicwave/)
+- [vs Bonded](https://caresse.app/vs-bonded/)
 
 ## Editorial
 
