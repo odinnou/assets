@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ══ SEO PRIMARY ══ -->
-    <title>Caresse — Expérience audio intime guidée par l'IA | iOS & Android</title>
-    <meta name="description" content="Caresse : une expérience audio immersive et privée pour éveiller l'intimité. Sessions générées par l'IA, solo ou en couple, sans contenu visuel. Gratuit sur iOS et Android.">
+    <title>Caresse — Application d'intimité par IA, couple &amp; solo</title>
+    <meta name="description" content="Application d'intimité guidée par l'IA, pour les couples et l'exploration solo. Audio immersif personnalisé, sans contenu visuel. Gratuit sur iOS et Android.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Studio Mokuton">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -29,8 +29,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://caresse.app/">
     <meta property="og:site_name" content="Caresse">
-    <meta property="og:title" content="Caresse — L'intimité guidée par l'IA">
-    <meta property="og:description" content="Expériences audio intimes et sensorielles générées en temps réel par l'IA. Solo ou en couple. Chaque session est unique, rien que pour vous.">
+    <meta property="og:title" content="Caresse — Application d'intimité par IA, couple &amp; solo">
+    <meta property="og:description" content="Application d'intimité guidée par l'IA, pour les couples et l'exploration solo. Expériences audio immersives personnalisées, générées en temps réel. Sans contenu visuel explicite.">
     <meta property="og:image" content="https://caresse.app/og-image-fr.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -41,8 +41,8 @@
 
     <!-- ══ TWITTER CARD ══ -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Caresse — L'intimité guidée par l'IA">
-    <meta name="twitter:description" content="Expériences audio intimes générées en temps réel par l'IA. Solo ou en couple.">
+    <meta name="twitter:title" content="Caresse — Application d'intimité par IA, couple &amp; solo">
+    <meta name="twitter:description" content="Application d'intimité guidée par l'IA, pour les couples et l'exploration solo. Audio immersif personnalisé, sans contenu visuel explicite.">
     <meta name="twitter:image" content="https://caresse.app/og-image-fr.png">
     <meta name="twitter:image:alt" content="Caresse — expérience audio intime guidée par l'IA">
 
@@ -52,7 +52,7 @@
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "Caresse",
-      "description": "Application audio intime guidée par intelligence artificielle. Téléchargement gratuit avec démos incluses, expériences sensorielles uniques générées en temps réel, personnalisées pour chaque utilisateur, solo ou en couple. Achats intégrés à partir de 2€ par session.",
+      "description": "Caresse est une application d'intimité guidée par l'IA, pour les couples et l'exploration solo, qui génère des expériences audio immersives personnalisées. Téléchargement gratuit avec démos incluses, sans création de compte. Chaque session est générée en temps réel selon vos envies, votre humeur et vos limites, sans contenu visuel explicite. Achats intégrés à partir de 2€ par session.",
       "url": "https://caresse.app/",
       "applicationCategory": "HealthApplication",
       "operatingSystem": "iOS, Android",
@@ -88,7 +88,31 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Découvrir Caresse : des expériences audio personnalisées par IA, pour les couples et en solo",
+      "description": "Présentation de Caresse, l'application d'intimité guidée par l'IA. Chaque session est générée en temps réel selon vos envies, votre dynamique relationnelle, l'intensité choisie et vos limites. Solo ou en couple, sans contenu visuel explicite.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/hLcwrOdqChY/maxresdefault.jpg"
+      ],
+      "uploadDate": "2026-07-12T06:47:42-07:00",
+      "duration": "PT2M41S",
+      "contentUrl": "https://www.youtube.com/watch?v=hLcwrOdqChY",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/hLcwrOdqChY",
+      "inLanguage": "en",
+      "isFamilyFriendly": false,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Studio Mokuton",
+        "url": "https://mokuton.studio/"
+      }
+    }
+    </script>
+
     <link rel="dns-prefetch" href="https://developer.apple.com">
+    <link rel="dns-prefetch" href="https://i.ytimg.com">
     <link rel="dns-prefetch" href="https://play.google.com">
     <link rel="dns-prefetch" href="https://mokuton.studio">
 
@@ -204,6 +228,20 @@
             font-size: clamp(1rem, 2vw, 1.2rem);
             max-width: 560px;
             margin-bottom: 40px;
+        }
+
+        .hero .hero-category {
+            color: var(--text-primary);
+            font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+            font-weight: 600;
+            max-width: 620px;
+            margin-bottom: 20px;
+        }
+
+        .hero p a {
+            color: var(--primary-vibrant);
+            text-decoration: underline;
+            text-underline-offset: 2px;
         }
 
         .cta-group {
@@ -384,6 +422,74 @@
             margin-bottom: 12px;
             font-style: italic;
         }
+
+        /* ── VIDEO ── */
+        .video-section { text-align: center; }
+        .video-header { margin-bottom: 48px; }
+        .video-header .section-sub { margin: 0 auto; max-width: 620px; color: var(--text-secondary); font-size: clamp(1rem, 2vw, 1.15rem); }
+
+        .video-frame {
+            position: relative;
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto;
+            aspect-ratio: 4 / 3;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(93,61,140,0.22);
+            background: #1A1A2E;
+        }
+
+        .video-frame iframe,
+        .video-facade {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-facade {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            cursor: pointer;
+            background: none;
+        }
+
+        .video-facade img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-facade::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(93,61,140,0.35), rgba(26,26,46,0.45));
+        }
+
+        .video-play {
+            position: relative;
+            z-index: 1;
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: var(--grad-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 28px rgba(255,107,157,0.45);
+            transition: transform 0.2s;
+        }
+
+        .video-facade:hover .video-play { transform: scale(1.08); }
+        .video-facade:focus-visible { outline: 3px solid var(--primary-vibrant); outline-offset: 3px; }
+        .video-play svg { width: 26px; height: 26px; fill: #fff; margin-left: 4px; }
 
         /* ── AUDIO ── */
         .audio-section {
@@ -630,7 +736,10 @@
         <p class="hero-eyebrow">✦ 18+ · Audio guidé · Intelligence artificielle</p>
 
         <h1>Ralentir.<br>Ressentir.<br><em>Se reconnecter.</em></h1>
-        <p>Caresse est une expérience audio immersive et privée conçue pour éveiller en douceur l'intimité, que vous soyez seul·e ou en couple. Une voix vous guide, une ambiance se crée, et chaque session est générée uniquement pour vous.</p>
+
+        <p class="hero-category">L'application d'intimité guidée par l'IA, pour les couples et l'exploration solo</p>
+
+        <p>Caresse est une application d'intimité guidée par l'IA, pour <a href="/for-couples/">les couples</a> et <a href="/for-solo-exploration/">l'exploration solo</a>. Créez des expériences audio immersives personnalisées selon vos envies, votre humeur et vos limites — en toute discrétion, sans contenu visuel explicite.</p>
         <div class="cta-group">
             <a href="#download" class="cta-pink">
                 <span class="inline">Télécharger gratuitement</span>
@@ -724,6 +833,21 @@
                     <p>Caresse génère votre session en quelques minutes. Vous êtes notifié·e dès que c'est prêt. Unique, inédite, rien que pour vous, et différente à chaque fois.</p>
                     </div>
             </div>
+        </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="video-section" id="video">
+        <div class="video-header">
+            <p class="section-label">La vidéo</p>
+            <h2 class="section-title">Voir Caresse en action.</h2>
+            <p class="section-sub">Deux minutes pour comprendre comment une session est générée, personnalisée et guidée — solo ou à deux.</p>
+        </div>
+        <div class="video-frame">
+            <button type="button" class="video-facade" data-video-id="hLcwrOdqChY" data-video-title="Découvrir Caresse : des expériences audio personnalisées par IA, pour les couples et en solo" aria-label="Lire la vidéo de présentation de Caresse">
+                <img src="https://i.ytimg.com/vi/hLcwrOdqChY/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720">
+                <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
         </div>
     </section>
 
@@ -929,6 +1053,8 @@
             <a href="/is-caresse-safe/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;transition:0.2s;" onmouseover="this.style.color='var(--primary)';this.style.background='rgba(93,61,140,0.06)'" onmouseout="this.style.color='var(--text-secondary)';this.style.background='transparent'">Confidentialité & Sécurité</a>
         </nav>
         <div class="footer-links">
+            <a href="/download/">Télécharger</a>
+            <span>·</span>
             <a href="/support/">Support</a>
             <span>·</span>
             <a href="/legal/fr/cgu/" rel="nofollow">CGU</a>
@@ -982,6 +1108,20 @@
         }
 
         resetTimer();
+    </script>
+
+    <script>
+        document.querySelectorAll('.video-facade').forEach(function (facade) {
+            facade.addEventListener('click', function () {
+                var id = facade.dataset.videoId;
+                var iframe = document.createElement('iframe');
+                iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+                iframe.title = facade.dataset.videoTitle;
+                iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                iframe.allowFullscreen = true;
+                facade.replaceWith(iframe);
+            });
+        });
     </script>
 </body>
 </html>
