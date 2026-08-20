@@ -67,7 +67,29 @@
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/blog/intimite-handicap-visuel-audio/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/blog/intimite-handicap-visuel-audio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/blog/intimacy-visual-impairment-audio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/blog/intimidad-discapacidad-visual-audio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/en/blog/intimacy-visual-impairment-audio/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/en/blog/intimacy-visual-impairment-audio/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/blog/intimite-handicap-visuel-audio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/blog/intimacy-visual-impairment-audio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/blog/intimidad-discapacidad-visual-audio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/en/blog/intimacy-visual-impairment-audio/"/>
+  </url>
+  <url>
+    <loc>https://caresse.app/es/blog/intimidad-discapacidad-visual-audio/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://caresse.app/blog/intimite-handicap-visuel-audio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://caresse.app/en/blog/intimacy-visual-impairment-audio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://caresse.app/es/blog/intimidad-discapacidad-visual-audio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://caresse.app/en/blog/intimacy-visual-impairment-audio/"/>
   </url>
   <url>
     <loc>https://caresse.app/blog/state-of-ai-romance-2026/</loc>
