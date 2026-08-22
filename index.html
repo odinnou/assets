@@ -51,6 +51,7 @@
     {
       "@context": "https://schema.org",
       "@type": "MobileApplication",
+      "@id": "https://caresse.app/#app",
       "name": "Caresse",
       "description": "Caresse est une application d'intimité guidée par l'IA, pour les couples et l'exploration solo, qui génère des expériences audio immersives personnalisées. Téléchargement gratuit avec démos incluses, sans création de compte. Chaque session est générée en temps réel selon vos envies, votre humeur et vos limites, sans contenu visuel explicite. Achats intégrés à partir de 2€ par session.",
       "url": "https://caresse.app/",
@@ -92,6 +93,7 @@
     {
       "@context": "https://schema.org",
       "@type": "VideoObject",
+      "@id": "https://caresse.app/#video",
       "name": "Découvrir Caresse : des expériences audio personnalisées par IA, pour les couples et en solo",
       "description": "Présentation de Caresse, l'application d'intimité guidée par l'IA. Chaque session est générée en temps réel selon vos envies, votre dynamique relationnelle, l'intensité choisie et vos limites. Solo ou en couple, sans contenu visuel explicite.",
       "thumbnailUrl": [
@@ -103,11 +105,27 @@
       "embedUrl": "https://www.youtube-nocookie.com/embed/hLcwrOdqChY",
       "inLanguage": "en",
       "isFamilyFriendly": false,
+      "about": { "@id": "https://caresse.app/#app" },
+      "mainEntityOfPage": { "@id": "https://caresse.app/#webpage" },
       "publisher": {
         "@type": "Organization",
         "name": "Studio Mokuton",
         "url": "https://mokuton.studio/"
       }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://caresse.app/#webpage",
+      "url": "https://caresse.app/",
+      "name": "Caresse, Application d'intimité par IA, couple & solo",
+      "inLanguage": "fr",
+      "about": { "@id": "https://caresse.app/#app" },
+      "primaryImageOfPage": "https://caresse.app/og-image-fr.png",
+      "video": { "@id": "https://caresse.app/#video" }
     }
     </script>
 
@@ -483,6 +501,16 @@
         /* ── VIDEO ── */
         .video-section { text-align: center; }
         .video-header { margin-bottom: 48px; }
+        .video-summary {
+            max-width: 720px;
+            margin: 28px auto 0;
+            text-align: left;
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+            line-height: 1.75;
+        }
+        .video-summary li { margin-bottom: 8px; }
+        .video-summary li:last-child { margin-bottom: 0; }
         .video-header .section-sub { margin: 0 auto; max-width: 620px; color: var(--text-secondary); font-size: clamp(1rem, 2vw, 1.15rem); }
 
         .video-frame {
@@ -948,6 +976,13 @@
                 <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
             </button>
         </div>
+        <ul class="video-summary">
+            <li>La démo part du choix du mode, solo ou duo, avec des profils remplis sous un prénom d'emprunt.</li>
+            <li>Elle montre ensuite la configuration d'une session : ambiance sonore, ton de la guidance, pratiques et accessoires.</li>
+            <li>L'intensité et l'atmosphère sont ajustées, du registre romantique au plus explicite.</li>
+            <li>La session est générée en quelques minutes, puis écoutée : une narration audio, sans aucun contenu visuel explicite.</li>
+        </ul>
+        <p class="video-summary"><a href="/how-it-works/">Voir le détail des quatre étapes →</a></p>
     </section>
 
     <!-- COMPARE -->

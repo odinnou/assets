@@ -51,6 +51,7 @@
     {
       "@context": "https://schema.org",
       "@type": "MobileApplication",
+      "@id": "https://caresse.app/#app",
       "name": "Caresse",
       "description": "Caresse is an AI-guided intimacy app for couples and solo exploration that generates personalized immersive audio experiences. Free to download with demos included, no account required. Sessions are generated in real time from your desires, mood and boundaries, with no explicit visual content. In-app purchases from €2 per session.",
       "url": "https://caresse.app/en/",
@@ -92,6 +93,7 @@
     {
       "@context": "https://schema.org",
       "@type": "VideoObject",
+      "@id": "https://caresse.app/#video",
       "name": "Discover Caresse: Personalized AI Audio Experiences for Couples & Solo",
       "description": "An introduction to Caresse, the AI-guided intimacy app. Every session is generated in real time from your preferences, relationship dynamic, selected intensity and boundaries. Solo or as a couple, with no explicit visual content.",
       "thumbnailUrl": [
@@ -103,11 +105,27 @@
       "embedUrl": "https://www.youtube-nocookie.com/embed/hLcwrOdqChY",
       "inLanguage": "en",
       "isFamilyFriendly": false,
+      "about": { "@id": "https://caresse.app/#app" },
+      "mainEntityOfPage": { "@id": "https://caresse.app/en/#webpage" },
       "publisher": {
         "@type": "Organization",
         "name": "Studio Mokuton",
         "url": "https://mokuton.studio/"
       }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://caresse.app/en/#webpage",
+      "url": "https://caresse.app/en/",
+      "name": "Caresse — AI Intimacy App for Couples & Solo | Guided Audio",
+      "inLanguage": "en",
+      "about": { "@id": "https://caresse.app/#app" },
+      "primaryImageOfPage": "https://caresse.app/og-image-en.png",
+      "video": { "@id": "https://caresse.app/#video" }
     }
     </script>
 
@@ -485,6 +503,16 @@
         /* ── VIDEO ── */
         .video-section { text-align: center; }
         .video-header { margin-bottom: 48px; }
+        .video-summary {
+            max-width: 720px;
+            margin: 28px auto 0;
+            text-align: left;
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+            line-height: 1.75;
+        }
+        .video-summary li { margin-bottom: 8px; }
+        .video-summary li:last-child { margin-bottom: 0; }
         .video-header .section-sub { margin: 0 auto; max-width: 620px; color: var(--text-secondary); font-size: clamp(1rem, 2vw, 1.15rem); }
 
         .video-frame {
@@ -984,6 +1012,13 @@
                 <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
             </button>
         </div>
+        <ul class="video-summary">
+            <li>The demo starts with the choice of mode, solo or duo, with profiles filled in under a made-up first name.</li>
+            <li>It then shows how a session is configured: soundscape, tone of the guidance, practices and accessories.</li>
+            <li>Intensity and atmosphere are adjusted, from romantic to more explicit.</li>
+            <li>The session is generated in a few minutes, then played back: an audio narration, with no explicit visual content.</li>
+        </ul>
+        <p class="video-summary"><a href="/en/how-it-works/">See the four steps in detail →</a></p>
     </section>
 
     <!-- COMPARE -->
