@@ -72,6 +72,27 @@ Règles :
 | Cible principale | `/for-couples/` |
 | Lien retour depuis | `/for-couples/` renvoie vers `/couples-game/` (déjà en place via le corps de page) |
 
+### Cluster « démo audio » (page de destination centrale)
+
+| | |
+|---|---|
+| Requête | démo audio couple, expérience audio couple, audio intime couple, guided intimacy audio, couples audio experience |
+| Page | `/demo/` · `/en/demo/` · `/es/demo/` (transactionnelle : écoute immédiate) |
+| Rôle | Destination unique de la promesse « écouter avant de s'inscrire », répétée jusqu'ici sur plusieurs pages sans URL propre |
+| Liens entrants | Lien homepage sous la section vidéo, entrée de nav header (les 3 locales) |
+| Liens sortants | `/for-couples/`, `/for-solo-exploration/`, `/alternatives/`, `/is-caresse-safe/`, `/how-it-works/` |
+
+Les MP3 sont servis en URLs stables sous `/demos/*.mp3` (GitHub Pages renvoie
+`Content-Type: audio/mpeg`), déclarés en `AudioObject` JSON-LD dans un `ItemList`, et
+rattachés à l'entité `MobileApplication`. Les `.mp3` ne sont pas dans le sitemap : c'est
+`/demo/` qu'on veut faire ranker.
+
+Les CTA « Écouter les démos gratuites » des comparatifs (`/alternatives/`,
+`/vs-melba/`, etc.) **restent pointés sur les stores** : ils avaient été basculés sur
+`/demo/` puis remis en place sur demande. À ce stade, `/demo/` reçoit donc uniquement
+les liens listés ci-dessus. Question ouverte : faut-il lui ouvrir d'autres entrées
+internes, et depuis quelles pages.
+
 ## Liens retour posés (bloc « Pour aller plus loin »)
 
 Un bloc éditorial inséré juste avant la `cta-section` de chaque landing. Une seule
