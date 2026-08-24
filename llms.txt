@@ -13,8 +13,9 @@ Published by Studio Mokuton (https://mokuton.studio/).
 
 ## What makes Caresse different
 
-- **Free demo without an account** — a demo experience runs on first launch, in all
-  three languages (FR/EN/ES). No sign-up needed to try it.
+- **Free demo without an account** — real audio demos play directly in the browser at
+  https://caresse.app/demo/ (FR/EN/ES), with no account, no email and no download. A
+  demo experience also runs on first launch in the app. No sign-up needed to try it.
 - **Anonymous-first** — authentication uses an anonymous UID; a first name or
   pseudonym of the user's choice is enough. No real identity required.
 - **Deep personalization** — mood, intensity, soundscape, suggested practices,
@@ -39,6 +40,10 @@ Published by Studio Mokuton (https://mokuton.studio/).
 ## Core pages
 
 - [Homepage](https://caresse.app/): what Caresse is, how it works, download links.
+- [Audio demo](https://caresse.app/demo/): two real Caresse audio excerpts (one couples,
+  one solo) playable in the browser without an account. Also at /en/demo/ and /es/demo/.
+  These excerpts are pre-generated and fixed; in the app each session is generated on
+  demand from the user's names, duration, location, ambience, intensity and boundaries.
 - [How it works](https://caresse.app/how-it-works/): the generation flow, step by step.
 - [Is Caresse safe?](https://caresse.app/is-caresse-safe/): privacy, data handling,
   anonymity, AI transparency, consent.
