@@ -6,7 +6,7 @@
 
     <!-- ══ SEO PRIMARY ══ -->
     <title>Démo audio Caresse : écoutez une expérience gratuitement</title>
-    <meta name="description" content="Écoutez de vraies démos audio Caresse directement dans votre navigateur. Solo ou en couple, en français. Pas de compte, pas d'email, pas de téléchargement.">
+    <meta name="description" content="Écoutez de vraies démos audio Caresse directement dans votre navigateur. Solo ou en couple, du plus doux au plus explicite, en français. Pas de compte, pas d'email, pas de téléchargement.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Studio Mokuton">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -31,7 +31,7 @@
     <meta property="og:url" content="https://caresse.app/demo/">
     <meta property="og:site_name" content="Caresse">
     <meta property="og:title" content="Démo audio Caresse : écoutez avant de télécharger">
-    <meta property="og:description" content="De vraies démos audio, jouables dans le navigateur. Solo ou en couple. Pas de compte, pas d'email.">
+    <meta property="og:description" content="De vraies démos audio, jouables dans le navigateur. Solo ou en couple, du plus doux au plus explicite. Pas de compte, pas d'email.">
     <meta property="og:image" content="https://caresse.app/og-image-fr.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -55,7 +55,7 @@
       "@id": "https://caresse.app/demo/#webpage",
       "url": "https://caresse.app/demo/",
       "name": "Démo audio Caresse : écoutez une expérience gratuitement",
-      "description": "Deux démos audio Caresse en français, jouables directement dans le navigateur, sans compte ni email : une expérience de couple et une expérience solo.",
+      "description": "Trois démos audio Caresse en français, jouables directement dans le navigateur, sans compte ni email : une découverte solo en registre doux, une expérience de couple et une expérience solo explicites.",
       "inLanguage": "fr",
       "isFamilyFriendly": false,
       "isPartOf": { "@type": "WebSite", "name": "Caresse", "url": "https://caresse.app/" },
@@ -93,11 +93,31 @@
       "@type": "ItemList",
       "name": "Démos audio Caresse en français",
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
-      "numberOfItems": 2,
+      "numberOfItems": 3,
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
+          "item": {
+            "@type": "AudioObject",
+            "@id": "https://caresse.app/demo/#demo-soft",
+            "name": "Démo Caresse en solo doux : Manon, découverte sensuelle",
+            "description": "Extrait d'une expérience audio Caresse en solo féminin dans un registre doux, dont la version complète dure 10 minutes. Voix féminine, chambre, massage sensuel et guidance à la première personne, ambiance cosy, langage suggestif sans crudité. Dans l'app, une expérience dure en général entre 25 et 35 minutes selon la génération.",
+            "contentUrl": "https://caresse.app/demos/solo_fr_manon_test.mp3",
+            "encodingFormat": "audio/mpeg",
+            "duration": "PT4M17S",
+            "inLanguage": "fr",
+            "isFamilyFriendly": false,
+            "isAccessibleForFree": true,
+            "requiresSubscription": false,
+            "genre": "Intimité guidée",
+            "about": { "@id": "https://caresse.app/demo/#app" },
+            "publisher": { "@type": "Organization", "name": "Studio Mokuton", "url": "https://mokuton.studio/" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
           "item": {
             "@type": "AudioObject",
             "@id": "https://caresse.app/demo/#demo-couple",
@@ -117,7 +137,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 2,
+          "position": 3,
           "item": {
             "@type": "AudioObject",
             "@id": "https://caresse.app/demo/#demo-solo",
@@ -164,7 +184,7 @@
           "name": "Combien de temps durent les démos, et une vraie expérience ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Les extraits proposés ici font un peu plus de quatre minutes : assez pour entendre la voix, l'ambiance et le niveau d'intensité, sans donner une expérience entière. Les expériences dont ils sont tirés durent 28 minutes pour le couple et 24 minutes pour le solo. Dans l'application, comptez en général entre 25 et 35 minutes : la durée n'est pas un réglage, elle dépend de ce que Caresse imagine sur le moment."
+            "text": "Les extraits proposés ici font un peu plus de quatre minutes : assez pour entendre la voix, l'ambiance et le niveau d'intensité, sans donner une expérience entière. Les expériences dont ils sont tirés durent 10 minutes pour la découverte en douceur, 28 minutes pour le couple et 24 minutes pour le solo. Dans l'application, comptez en général entre 25 et 35 minutes : la durée n'est pas un réglage, elle dépend de ce que Caresse imagine sur le moment."
           }
         },
         {
@@ -180,7 +200,7 @@
           "name": "Ces démos contiennent-elles du contenu explicite ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Les deux extraits proposés ici sont réglés sur le niveau de langage le plus direct de l'application. Ce sont des fictions guidées, en audio uniquement, sans aucun contenu visuel. Réservé aux adultes de 18 ans et plus, avec un casque et dans un endroit où vous êtes tranquille. L'application propose aussi des registres nettement plus doux."
+            "text": "La première démo est réglée sur le registre le plus doux de l'application ; les deux suivantes sur son niveau de langage le plus direct. Ce sont des fictions guidées, en audio uniquement, sans aucun contenu visuel. Réservé aux adultes de 18 ans et plus, avec un casque et dans un endroit où vous êtes tranquille."
           }
         },
         {
@@ -236,6 +256,7 @@
         .demo-meta { display: flex; flex-wrap: wrap; gap: 7px; }
         .demo-meta span { background: var(--grad-soft); border: 1px solid rgba(158,123,181,0.18); color: var(--text-secondary); padding: 5px 12px; border-radius: 14px; font-size: 0.8rem; font-weight: 600; }
         .demo-meta span.intense { background: rgba(255,107,157,0.10); border-color: rgba(255,107,157,0.28); color: #C7527C; }
+        .demo-meta span.soft { background: rgba(147,97,253,0.09); border-color: rgba(147,97,253,0.26); color: #6B44B8; }
         .players-note { max-width: 820px; margin: 26px auto 0; text-align: center; font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; }
         .players-note a { color: var(--primary-vibrant); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 
@@ -346,8 +367,25 @@
         <p class="headphones">🎧 Au casque, dans un endroit tranquille</p>
         <div class="players-wrap">
 
+            <article class="demo-card" id="demo-soft">
+                <p class="kicker">Démo 1 · En solo, tout en douceur</p>
+                <h2>Manon, une première fois tout en douceur</h2>
+                <p class="what">Ce que cette démo permet d'entendre : le registre le plus doux de Caresse. Une voix qui suggère plus qu'elle ne décrit, attentive au souffle et au rythme, sans langage cru. C'est le bon point de départ si vous découvrez l'application. C'est un extrait : l'expérience complète dont il est tiré dure 10 minutes.</p>
+                <audio controls preload="none" src="/demos/solo_fr_manon_test.mp3" aria-label="Démo audio Caresse en solo, Manon, 4 minutes 17">
+                    Votre navigateur ne peut pas lire cet audio. <a href="/demos/solo_fr_manon_test.mp3">Téléchargez le fichier MP3</a>.
+                </audio>
+                <div class="demo-meta">
+                    <span>⏱ 4 min 17</span>
+                    <span>🇫🇷 Français</span>
+                    <span>🧍‍♀️ Solo féminin</span>
+                    <span>🗣 Voix féminine</span>
+                    <span>🛋 Ambiance cosy</span>
+                    <span class="soft">Intensité : douce</span>
+                </div>
+            </article>
+
             <article class="demo-card" id="demo-couple">
-                <p class="kicker">Démo 1 · En couple</p>
+                <p class="kicker">Démo 2 · En couple</p>
                 <h2>Mathieu &amp; Clara, un soir dans la chambre</h2>
                 <p class="what">Ce que cette démo permet d'entendre : une narration qui s'adresse à deux personnes à la fois, prénoms prononcés, qui guide l'un puis l'autre. Massage sensuel puis pratiques orales, ambiance torride, langage direct. C'est un extrait : l'expérience complète dont il est tiré dure 28 minutes.</p>
                 <audio controls preload="none" src="/demos/couple_fr_mathieu_clara_test.mp3" aria-label="Démo audio Caresse en couple, Mathieu et Clara, 4 minutes 48">
@@ -364,7 +402,7 @@
             </article>
 
             <article class="demo-card" id="demo-solo">
-                <p class="kicker">Démo 2 · En solo</p>
+                <p class="kicker">Démo 3 · En solo, sans détour</p>
                 <h2>Inès, une parenthèse pour elle seule</h2>
                 <p class="what">Ce que cette démo permet d'entendre : une guidance qui s'adresse à une seule personne, plus lente, plus attentive au rythme et à la respiration. Ambiance zen, accessoires suggérés, langage direct. C'est un extrait : l'expérience complète dont il est tiré dure 24 minutes.</p>
                 <audio controls preload="none" src="/demos/solo_fr_ines_test.mp3" aria-label="Démo audio Caresse en solo, Inès, 4 minutes 20">
@@ -381,7 +419,7 @@
             </article>
 
         </div>
-        <p class="players-note">Ces deux extraits sont réglés sur le registre le plus direct de l'application, pour montrer jusqu'où elle va. L'app propose aussi des niveaux nettement plus doux, d'autres lieux et d'autres ambiances. Les mêmes scénarios existent en <a href="/en/demo/">anglais</a> et en <a href="/es/demo/">espagnol</a>.</p>
+        <p class="players-note">Commencez par Manon si vous découvrez Caresse : c'est le registre le plus doux. Les deux autres extraits sont réglés sur le niveau le plus direct de l'application, pour montrer jusqu'où elle va. L'app propose encore d'autres lieux et d'autres ambiances. Les mêmes scénarios existent en <a href="/en/demo/">anglais</a> et en <a href="/es/demo/">espagnol</a>.</p>
     </section>
 
     <!-- DIFFERENCE -->
@@ -487,7 +525,7 @@
             </div>
             <div class="faq-item">
                 <h3>Combien de temps durent les démos, et une vraie expérience ?</h3>
-                <p>Les extraits proposés ici font un peu plus de quatre minutes : assez pour entendre la voix, l'ambiance et le niveau d'intensité, sans donner une expérience entière. Les expériences dont ils sont tirés durent 28 minutes pour le couple et 24 minutes pour le solo. Dans l'application, comptez en général entre 25 et 35 minutes : la durée n'est pas un réglage, elle dépend de ce que Caresse imagine sur le moment.</p>
+                <p>Les extraits proposés ici font un peu plus de quatre minutes : assez pour entendre la voix, l'ambiance et le niveau d'intensité, sans donner une expérience entière. Les expériences dont ils sont tirés durent 10 minutes pour la découverte en douceur, 28 minutes pour le couple et 24 minutes pour le solo. Dans l'application, comptez en général entre 25 et 35 minutes : la durée n'est pas un réglage, elle dépend de ce que Caresse imagine sur le moment.</p>
             </div>
             <div class="faq-item">
                 <h3>Les démos existent-elles en anglais et en espagnol ?</h3>
@@ -495,7 +533,7 @@
             </div>
             <div class="faq-item">
                 <h3>Ces démos contiennent-elles du contenu explicite ?</h3>
-                <p>Les deux extraits proposés ici sont réglés sur le niveau de langage le plus direct de l'application. Ce sont des fictions guidées, en audio uniquement, sans aucun contenu visuel. Réservé aux adultes de 18 ans et plus, avec un casque et dans un endroit où vous êtes tranquille. L'application propose aussi des registres nettement plus doux.</p>
+                <p>La première démo est réglée sur le registre le plus doux de l'application ; les deux suivantes sur son niveau de langage le plus direct. Ce sont des fictions guidées, en audio uniquement, sans aucun contenu visuel. Réservé aux adultes de 18 ans et plus, avec un casque et dans un endroit où vous êtes tranquille.</p>
             </div>
             <div class="faq-item">
                 <h3>Puis-je écouter une démo en couple depuis un seul téléphone ?</h3>

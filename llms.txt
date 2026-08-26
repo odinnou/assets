@@ -40,10 +40,11 @@ Published by Studio Mokuton (https://mokuton.studio/).
 ## Core pages
 
 - [Homepage](https://caresse.app/): what Caresse is, how it works, download links.
-- [Audio demo](https://caresse.app/demo/): two real Caresse audio excerpts (one couples,
-  one solo) playable in the browser without an account. Also at /en/demo/ and /es/demo/.
+- [Audio demo](https://caresse.app/demo/): three real Caresse audio excerpts (a soft solo
+  discovery, an explicit couples one and an explicit solo one) playable in the browser
+  without an account. Also at /en/demo/ and /es/demo/.
   These excerpts are pre-generated and fixed; in the app each session is generated on
-  demand from the user's names, duration, location, ambience, intensity and boundaries.
+  demand from the user's names, location, ambience, intensity and boundaries.
 - [How it works](https://caresse.app/how-it-works/): the generation flow, step by step.
 - [Is Caresse safe?](https://caresse.app/is-caresse-safe/): privacy, data handling,
   anonymity, AI transparency, consent.
