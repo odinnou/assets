@@ -79,7 +79,7 @@ Règles :
 | Requête | démo audio couple, expérience audio couple, audio intime couple, guided intimacy audio, couples audio experience |
 | Page | `/demo/` · `/en/demo/` · `/es/demo/` (transactionnelle : écoute immédiate) |
 | Rôle | Destination unique de la promesse « écouter avant de s'inscrire », répétée jusqu'ici sur plusieurs pages sans URL propre |
-| Liens entrants | Lien homepage sous la section vidéo, entrée de nav header (les 3 locales), un lien contextuel depuis `/couples-game/`, `/for-couples/` et `/for-solo-exploration/` (les 3 locales) |
+| Liens entrants | Lien homepage sous la section vidéo, entrée de nav header (les 3 locales), un lien contextuel depuis `/couples-game/`, `/for-couples/` et `/for-solo-exploration/` (les 3 locales), et une entrée sitewide en tête du nav éditorial du footer (73 pages) |
 | Liens sortants | `/for-couples/`, `/for-solo-exploration/`, `/alternatives/`, `/is-caresse-safe/`, `/how-it-works/` |
 
 Les ancres de section sur `/demo/` préexistaient à ce maillage. Elles ne sont **pas**
@@ -101,6 +101,30 @@ Un seul lien par page, placé en fin de section « 4 étapes », juste après l'
 voix prend le relais — le point du texte où le lecteur se demande à quoi cette voix
 ressemble. Ancre descriptive (« Écouter une démo de Caresse en couple / en solo »), pas
 « découvrir Caresse ».
+
+### Entrée footer sitewide — motif : accessibilité mobile
+
+Le header applique `@media (max-width: 768px) { .header-link { display: none; } }` et il
+n'existe **aucun menu burger de remplacement**. Les liens header disparaissent donc sous
+768px. Ce n'est pas un problème de crawl (Googlebot suit les liens présents dans le DOM,
+`display:none` compris, et un breakpoint responsive n'est pas du cloaking) : c'est un
+problème d'**usage mobile**.
+
+Blog, Comment ça marche, Jeu pour couple et Alternatives étaient déjà rattrapés par le
+nav éditorial du footer. `/demo/` était la seule des cinq entrées header absente de ce
+footer : sur mobile elle n'était atteignable par aucune navigation, alors que c'est la
+page de conversion vers laquelle tout le reste du maillage pousse.
+
+Corrigé en ajoutant `/demo/` **en première position** du `<nav>` éditorial du footer, sur
+**73 pages** (fr 25 · en 25 · es 23), libellé traduit par locale (« Démo audio » /
+« Audio demo » / « Demo de audio ») et style identique aux liens voisins.
+
+Exclusions volontaires : les 3 pages `/demo/` elles-mêmes (auto-lien), `/download/` et
+`/support/` (pas de nav éditorial), toutes les pages `legal/*`, et la locale `pt`
+(une seule page, hors périmètre).
+
+Si un menu burger est ajouté un jour, cette entrée footer reste pertinente et n'a pas à
+être retirée.
 
 Les MP3 sont servis en URLs stables sous `/demos/*.mp3` (GitHub Pages renvoie
 `Content-Type: audio/mpeg`), déclarés en `AudioObject` JSON-LD dans un `ItemList`, et
