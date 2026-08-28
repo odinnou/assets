@@ -252,7 +252,7 @@
 <body class="lang-en">
 
     <header>
-        <a href="/en/" aria-label="Caresse — home"><img src="/caresse-logo.svg" class="logo" alt="Caresse, AI-guided intimate audio app"></a>
+        <a href="/en/" aria-label="Caresse — home"><img src="/caresse-logo.svg" class="logo" alt="Caresse, AI-guided intimate audio app" width="250" height="80"></a>
         <div class="header-right">
             <a href="/en/blog/" class="header-link">Blog</a>
             <a href="/en/how-it-works/" class="header-link">How it works</a>
@@ -276,7 +276,7 @@
         <h1>Looking for an alternative?<br>Listen before <em>opening an account.</em></h1>
         <p>If you're evaluating Melba, Coelle, Dipsea or InTheMoment, Caresse is worth the detour. Caresse offers dozens of audio demos you can play right now, no sign-up, no email, in English, French and Spanish. And among the apps compared here, it's the only one that runs 100% anonymously, payments included.</p>
         <div class="cta-group">
-            <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-cta" class="cta-pink" target="_blank" rel="noopener">Listen to free demos</a>
+            <a href="/en/demo/" id="hero-cta-demo" class="cta-pink">Listen to free demos</a>
             <a href="#matrix" class="cta-ghost">See the matrix</a>
             <a href="/en/demo/" class="cta-ghost">🎧 Listen to a real demo</a>
         </div>
@@ -615,6 +615,11 @@
         </div>
     </section>
 
+    <!-- FURTHER READING -->
+    <section style="padding:56px 5%;text-align:center;">
+        <p style="max-width:640px;margin:0 auto;font-size:0.95rem;line-height:1.7;color:var(--text-secondary);">We compiled the numbers behind the AI-assisted intimacy market — adoption, usage and expectations — into an in-depth study: <a href="/en/blog/state-of-ai-romance-2026/" style="color:var(--primary-vibrant);font-weight:600;text-decoration:underline;text-underline-offset:2px;">State of AI Romance 2026, AI and intimacy in figures</a>.</p>
+    </section>
+
     <!-- CTA -->
     <section class="cta-section" id="download">
         <p class="section-label">Ready to try?</p>
@@ -633,7 +638,7 @@
     </section>
 
     <footer>
-        <a href="/en/" aria-label="Caresse — home"><img src="/caresse-logo.svg" style="height:28px;" alt="Caresse"></a>
+        <a href="/en/" aria-label="Caresse — home"><img src="/caresse-logo.svg" style="height:28px;" alt="Caresse" width="250" height="80"></a>
         <nav aria-label="Use cases" style="display:flex;gap:6px 16px;flex-wrap:wrap;justify-content:center;max-width:720px;">
             <a href="/en/demo/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;transition:0.2s;" onmouseover="this.style.color='var(--primary)';this.style.background='rgba(93,61,140,0.06)'" onmouseout="this.style.color='var(--text-secondary)';this.style.background='transparent'"><span class="inline">Audio demo</span></a>
             <a href="/en/blog/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;">Blog</a>
@@ -670,13 +675,6 @@
         </div>
         <p class="footer-copy">© 2026 <a href="https://mokuton.studio/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.7;">Studio Mokuton</a>, Caresse · 18+ Adults only</p>
     </footer>
-    <script>
-        (function () {
-            if (/Android/i.test(navigator.userAgent)) {
-                var cta = document.getElementById('hero-cta');
-                if (cta) cta.href = "https://play.google.com/store/apps/details?id=com.flareai.caresse";
-            }
-        })();
-    </script>
+
 </body>
 </html>

@@ -288,7 +288,7 @@
 <body class="lang-fr">
 
     <header>
-        <a href="/" aria-label="Caresse, accueil"><img src="/caresse-logo.svg" class="logo" alt="Caresse, application audio intime guidée par l'IA"></a>
+        <a href="/" aria-label="Caresse, accueil"><img src="/caresse-logo.svg" class="logo" alt="Caresse, application audio intime guidée par l'IA" width="250" height="80"></a>
         <div class="header-right">
             <a href="/blog/" class="header-link">Blog</a>
             <a href="/how-it-works/" class="header-link">Comment ça marche</a>
@@ -312,7 +312,7 @@
         <h1>Caresse vs Dipsea :<br>écoutez avant <em>de vous décider.</em></h1>
         <p>Dipsea est une bibliothèque américaine de stories audio érotiques : un large catalogue d'histoires pré-enregistrées en anglais, pensées pour l'écoute passive, seul ou à deux, sur abonnement. Caresse prend une approche différente : des dizaines de vraies démos jouables tout de suite, sans inscription, sans compte, sans email, pour entendre la qualité, le grain de voix et l'ambiance avant la moindre décision. Puis un scénario généré sur-mesure, qui s'adresse à vous par votre prénom.</p>
         <div class="cta-group">
-            <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-cta" class="cta-pink" target="_blank" rel="noopener">Écouter les démos gratuites</a>
+            <a href="/demo/" id="hero-cta-demo" class="cta-pink">Écouter les démos gratuites</a>
             <a href="#verdict" class="cta-ghost">Voir le verdict</a>
         </div>
         <p class="hero-badge">Audio en français, anglais, espagnol · Sans compte, sans email · iOS et Android</p>
@@ -606,7 +606,7 @@
     </section>
 
     <footer>
-        <a href="/" aria-label="Caresse, accueil"><img src="/caresse-logo.svg" style="height:28px;" alt="Caresse"></a>
+        <a href="/" aria-label="Caresse, accueil"><img src="/caresse-logo.svg" style="height:28px;" alt="Caresse" width="250" height="80"></a>
         <nav aria-label="Cas d'usage" style="display:flex;gap:6px 16px;flex-wrap:wrap;justify-content:center;max-width:720px;">
             <a href="/demo/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;transition:0.2s;" onmouseover="this.style.color='var(--primary)';this.style.background='rgba(93,61,140,0.06)'" onmouseout="this.style.color='var(--text-secondary)';this.style.background='transparent'"><span class="inline">Démo audio</span></a>
             <a href="/blog/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;">Blog</a>
@@ -643,13 +643,6 @@
         </div>
         <p class="footer-copy">© 2026 <a href="https://mokuton.studio/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.7;">Studio Mokuton</a>, Caresse · 18+ Adultes uniquement</p>
     </footer>
-    <script>
-        (function () {
-            if (/Android/i.test(navigator.userAgent)) {
-                var cta = document.getElementById('hero-cta');
-                if (cta) cta.href = "https://play.google.com/store/apps/details?id=com.flareai.caresse";
-            }
-        })();
-    </script>
+
 </body>
 </html>
