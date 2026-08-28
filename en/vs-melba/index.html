@@ -62,7 +62,7 @@
         },
         {
           "@type": "Question",
-          "name": "Does Caresse require an account like Melba or Coelle?",
+          "name": "Does Caresse require an account like most competitors?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "No. Caresse is fully anonymous: no account creation is ever required to use the app. Even purchases happen without an account. That's a structural difference from almost every competitor, where signing up is a prerequisite for everything."
@@ -89,7 +89,7 @@
           "name": "Is Caresse content as polished as Melba's?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Every Caresse session runs through a multi-phase pipeline (setup, immersion, first touches, exploration, intensity crescendo, polishing) where every prompt is written and refined by the Caresse editorial team. The voice is then synthesized with premium TTS engines. The result is coherent, rhythmically paced, and never generic."
+            "text": "Yes. Every Caresse session runs through a multi-phase pipeline (setup, immersion, first touches, exploration, intensity crescendo, polishing) where every prompt is written and refined by the Caresse editorial team. The voice is then synthesized with premium TTS engines. The result is coherent, rhythmically paced, and never generic. The free audio demos let you judge for yourself before paying."
           }
         },
         {
@@ -98,14 +98,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "The combinatorial space is essentially infinite. Each intimate profile combines participants' genders, names, practices, accessories, intensity, dirty-talk level, setting and atmosphere. Where Melba offers a fixed catalog (behind an account and onboarding), Caresse generates a new, unique experience every time, with no friction."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I try Caresse without committing?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Caresse is free to download on Android (iOS coming soon) and the first discovery session is included. No signup beyond an alias. Your real data stays yours."
           }
         }
       ]
@@ -305,7 +297,7 @@
 <body class="lang-en">
 
     <header>
-        <a href="/en/" aria-label="Caresse — home"><img src="/caresse-logo.svg" class="logo" alt="Caresse, AI-guided intimate audio app"></a>
+        <a href="/en/" aria-label="Caresse — home"><img src="/caresse-logo.svg" class="logo" alt="Caresse, AI-guided intimate audio app" width="250" height="80"></a>
         <div class="header-right">
             <a href="/en/blog/" class="header-link">Blog</a>
             <a href="/en/how-it-works/" class="header-link">How it works</a>
@@ -329,7 +321,7 @@
         <h1>Caresse vs Melba:<br>listen first, <em>decide later.</em></h1>
         <p>Melba offers a catalog of pre-recorded audio experiences in French and English, validated by couple therapists. The app requires an account and a detailed onboarding where you fill in your intimate preferences before accessing any content. Caresse takes a different path: dozens of real audio demos you can play right now — no sign-up, no account, no email — so you hear the sound quality, the voice and the atmosphere before any decision. Then a bespoke ritual that calls you by name.</p>
         <div class="cta-group">
-            <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-cta" class="cta-pink" target="_blank" rel="noopener">Listen to free demos</a>
+            <a href="/en/demo/" id="hero-cta-demo" class="cta-pink">Listen to free demos</a>
             <a href="#verdict" class="cta-ghost">See the verdict</a>
         </div>
         <p class="hero-badge">Audio in English, French, Spanish · No account, no email · Android (iOS coming soon)</p>
@@ -597,6 +589,7 @@
                 <p class="ttl">Caresse vs InTheMoment</p>
                 <p class="desc">Comparing AI approaches: curated prompts vs raw generation.</p>
             </a>
+            <a href="/en/vs-quinn/" class="related-card"><div class="icon">🆚</div><p class="ttl">Caresse vs Quinn</p><p class="desc">English erotic audio vs a generated experience in three languages.</p></a>
             <a href="/en/alternatives/" class="related-card">
                 <div class="icon">🧭</div>
                 <p class="ttl">All alternatives</p>
@@ -624,7 +617,7 @@
     </section>
 
     <footer>
-        <a href="/en/" aria-label="Caresse — home"><img src="/caresse-logo.svg" style="height:28px;" alt="Caresse"></a>
+        <a href="/en/" aria-label="Caresse — home"><img src="/caresse-logo.svg" style="height:28px;" alt="Caresse" width="250" height="80"></a>
         <nav aria-label="Use cases" style="display:flex;gap:6px 16px;flex-wrap:wrap;justify-content:center;max-width:720px;">
             <a href="/en/demo/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;transition:0.2s;" onmouseover="this.style.color='var(--primary)';this.style.background='rgba(93,61,140,0.06)'" onmouseout="this.style.color='var(--text-secondary)';this.style.background='transparent'"><span class="inline">Audio demo</span></a>
             <a href="/en/blog/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;">Blog</a>
@@ -661,13 +654,6 @@
         </div>
         <p class="footer-copy">© 2026 <a href="https://mokuton.studio/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.7;">Studio Mokuton</a>, Caresse · 18+ Adults only</p>
     </footer>
-    <script>
-        (function () {
-            if (/Android/i.test(navigator.userAgent)) {
-                var cta = document.getElementById('hero-cta');
-                if (cta) cta.href = "https://play.google.com/store/apps/details?id=com.flareai.caresse";
-            }
-        })();
-    </script>
+
 </body>
 </html>

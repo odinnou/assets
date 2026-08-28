@@ -72,6 +72,7 @@ Published by Studio Mokuton (https://mokuton.studio/).
 - [vs In The Moment](https://caresse.app/vs-inthemoment/)
 - [vs Magic Wave](https://caresse.app/vs-magicwave/)
 - [vs Bonded](https://caresse.app/vs-bonded/)
+- [vs Quinn](https://caresse.app/vs-quinn/)
 
 ## Editorial
 

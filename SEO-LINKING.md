@@ -131,12 +131,19 @@ Les MP3 sont servis en URLs stables sous `/demos/*.mp3` (GitHub Pages renvoie
 rattachés à l'entité `MobileApplication`. Les `.mp3` ne sont pas dans le sitemap : c'est
 `/demo/` qu'on veut faire ranker.
 
-Les CTA « Écouter les démos gratuites » des comparatifs (`/alternatives/`,
-`/vs-melba/`, etc.) **restent pointés sur les stores** : ils avaient été basculés sur
-`/demo/` puis remis en place sur demande. Vérifié : les 24 CTA hero des comparatifs
-(8 pages × 3 locales) pointent toujours vers l'App Store. Non touchés — la décision de
-les rebasculer sur `/demo/` reste ouverte et appartient à l'éditeur, l'ancre « Écouter
-les démos gratuites » décrivant une action que `/demo/` remplit et pas le store.
+Les CTA « Écouter les démos gratuites » des comparatifs (`/alternatives/`, `/vs-*/`)
+pointent désormais sur `/demo/` — **21 CTA, 7 pages × 3 locales**. Décision prise le
+2026-08-28 après mesure : l'ancre promettait une écoute et menait à une installation.
+
+⚠️ **Piège technique associé.** Ces pages portaient un script qui réécrivait
+`document.getElementById('hero-cta').href` vers Google Play sur Android. Changer le seul
+`href` aurait été **annulé sur mobile Android**, c'est-à-dire précisément la cible. Le
+CTA basculé a donc été renommé `id="hero-cta-demo"`, et les 24 scripts devenus morts ont
+été supprimés. Les 42 pages qui gardent un CTA store conservent leur `id="hero-cta"` et
+leur script — ne pas les renommer.
+
+Effet mesuré sur le maillage : liens éditoriaux entrants vers `/demo/` **7 → 14 par
+locale** ; ratio global liens store / liens démo **2,13× → 1,67×**.
 
 ## Liens retour posés (bloc « Pour aller plus loin »)
 

@@ -55,7 +55,7 @@
       "@id": "https://caresse.app/demo/#webpage",
       "url": "https://caresse.app/demo/",
       "name": "Démo audio Caresse : écoutez une expérience gratuitement",
-      "description": "Trois démos audio Caresse en français, jouables directement dans le navigateur, sans compte ni email : une découverte solo en registre doux, une expérience de couple et une expérience solo explicites.",
+      "description": "Six démos audio Caresse en français, jouables directement dans le navigateur, sans compte ni email : une découverte solo en registre doux, puis des extraits explicites en solo, en couple hétéro, entre deux femmes et entre deux hommes.",
       "inLanguage": "fr",
       "isFamilyFriendly": false,
       "isPartOf": { "@type": "WebSite", "name": "Caresse", "url": "https://caresse.app/" },
@@ -88,75 +88,171 @@
     }
     </script>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Démos audio Caresse en français",
-      "itemListOrder": "https://schema.org/ItemListOrderAscending",
-      "numberOfItems": 3,
-      "itemListElement": [
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Démos audio Caresse en français",
+    "itemListOrder": "https://schema.org/ItemListOrderAscending",
+    "numberOfItems": 6,
+    "itemListElement": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "AudioObject",
-            "@id": "https://caresse.app/demo/#demo-soft",
-            "name": "Démo Caresse en solo doux : Manon, découverte sensuelle",
-            "description": "Extrait d'une expérience audio Caresse en solo féminin dans un registre doux, dont la version complète dure 26 minutes. Voix féminine, chambre, massage sensuel et guidance à la première personne, ambiance cosy, langage suggestif sans crudité. Dans l'app, une expérience dure en général entre 25 et 35 minutes selon la génération.",
-            "contentUrl": "https://caresse.app/demos/solo_fr_manon_test.mp3",
-            "encodingFormat": "audio/mpeg",
-            "duration": "PT4M17S",
-            "inLanguage": "fr",
-            "isFamilyFriendly": false,
-            "isAccessibleForFree": true,
-            "requiresSubscription": false,
-            "genre": "Intimité guidée",
-            "about": { "@id": "https://caresse.app/demo/#app" },
-            "publisher": { "@type": "Organization", "name": "Studio Mokuton", "url": "https://mokuton.studio/" }
-          }
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@type": "AudioObject",
+                "@id": "https://caresse.app/demo/#demo-soft",
+                "name": "Démo Caresse en solo doux : Manon, découverte sensuelle",
+                "description": "Extrait d'une expérience audio Caresse en solo féminin dans un registre doux, dont la version complète dure 26 minutes. Voix féminine, chambre, massage sensuel et guidance à la première personne, ambiance cosy, langage suggestif sans crudité. Dans l'app, une expérience dure en général entre 25 et 35 minutes selon la génération.",
+                "contentUrl": "https://caresse.app/demos/solo_fr_manon_test.mp3",
+                "encodingFormat": "audio/mpeg",
+                "duration": "PT4M18S",
+                "inLanguage": "fr",
+                "isFamilyFriendly": false,
+                "isAccessibleForFree": true,
+                "requiresSubscription": false,
+                "genre": "Intimité guidée",
+                "about": {
+                    "@id": "https://caresse.app/demo/#app"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Studio Mokuton",
+                    "url": "https://mokuton.studio/"
+                }
+            }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "AudioObject",
-            "@id": "https://caresse.app/demo/#demo-couple",
-            "name": "Démo Caresse en couple : Mathieu & Clara, ambiance torride",
-            "description": "Extrait d'une expérience audio Caresse pour couple hétéro, dont la version complète dure 28 minutes. Voix féminine, chambre, massage sensuel et pratiques orales, ambiance torride, dirty talk explicite. Dans l'app, une expérience dure en général entre 25 et 35 minutes selon la génération.",
-            "contentUrl": "https://caresse.app/demos/couple_fr_mathieu_clara_test.mp3",
-            "encodingFormat": "audio/mpeg",
-            "duration": "PT4M48S",
-            "inLanguage": "fr",
-            "isFamilyFriendly": false,
-            "isAccessibleForFree": true,
-            "requiresSubscription": false,
-            "genre": "Intimité guidée",
-            "about": { "@id": "https://caresse.app/demo/#app" },
-            "publisher": { "@type": "Organization", "name": "Studio Mokuton", "url": "https://mokuton.studio/" }
-          }
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@type": "AudioObject",
+                "@id": "https://caresse.app/demo/#demo-couple",
+                "name": "Démo Caresse en couple : Mathieu & Clara, ambiance torride",
+                "description": "Extrait d'une expérience audio Caresse pour couple hétéro, dont la version complète dure 28 minutes. Voix féminine, chambre, massage sensuel et pratiques orales, ambiance torride, dirty talk explicite. Dans l'app, une expérience dure en général entre 25 et 35 minutes selon la génération.",
+                "contentUrl": "https://caresse.app/demos/couple_fr_mathieu_clara_test.mp3",
+                "encodingFormat": "audio/mpeg",
+                "duration": "PT4M48S",
+                "inLanguage": "fr",
+                "isFamilyFriendly": false,
+                "isAccessibleForFree": true,
+                "requiresSubscription": false,
+                "genre": "Intimité guidée",
+                "about": {
+                    "@id": "https://caresse.app/demo/#app"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Studio Mokuton",
+                    "url": "https://mokuton.studio/"
+                }
+            }
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
-            "@type": "AudioObject",
-            "@id": "https://caresse.app/demo/#demo-solo",
-            "name": "Démo Caresse en solo : Inès, ambiance zen",
-            "description": "Extrait d'une expérience audio Caresse en solo féminin, dont la version complète dure 24 minutes. Voix féminine, chambre, guidance à la première personne avec accessoires, ambiance zen, dirty talk explicite. Dans l'app, une expérience dure en général entre 25 et 35 minutes selon la génération.",
-            "contentUrl": "https://caresse.app/demos/solo_fr_ines_test.mp3",
-            "encodingFormat": "audio/mpeg",
-            "duration": "PT4M20S",
-            "inLanguage": "fr",
-            "isFamilyFriendly": false,
-            "isAccessibleForFree": true,
-            "requiresSubscription": false,
-            "genre": "Intimité guidée",
-            "about": { "@id": "https://caresse.app/demo/#app" },
-            "publisher": { "@type": "Organization", "name": "Studio Mokuton", "url": "https://mokuton.studio/" }
-          }
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@type": "AudioObject",
+                "@id": "https://caresse.app/demo/#demo-solo",
+                "name": "Démo Caresse en solo : Inès, ambiance zen",
+                "description": "Extrait d'une expérience audio Caresse en solo féminin, dont la version complète dure 24 minutes. Voix féminine, chambre, guidance à la première personne avec accessoires, ambiance zen, dirty talk explicite. Dans l'app, une expérience dure en général entre 25 et 35 minutes selon la génération.",
+                "contentUrl": "https://caresse.app/demos/solo_fr_ines_test.mp3",
+                "encodingFormat": "audio/mpeg",
+                "duration": "PT4M20S",
+                "inLanguage": "fr",
+                "isFamilyFriendly": false,
+                "isAccessibleForFree": true,
+                "requiresSubscription": false,
+                "genre": "Intimité guidée",
+                "about": {
+                    "@id": "https://caresse.app/demo/#app"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Studio Mokuton",
+                    "url": "https://mokuton.studio/"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+                "@type": "AudioObject",
+                "@id": "https://caresse.app/demo/#demo-couple-joueur",
+                "name": "Démo Caresse en couple : Nicolas & Jade, torride et joueur",
+                "description": "Extrait d'une expérience audio Caresse pour couple hétéro, dont la version complète dure 32 minutes. Voix féminine, chambre, ambiance torride avec accessoires et guidance alternée entre les deux partenaires. Dans l'app, une expérience dure en général entre 25 et 35 minutes selon la génération.",
+                "contentUrl": "https://caresse.app/demos/couple_fr_nicolas_jade_test.mp3",
+                "encodingFormat": "audio/mpeg",
+                "duration": "PT4M50S",
+                "inLanguage": "fr",
+                "isFamilyFriendly": false,
+                "isAccessibleForFree": true,
+                "requiresSubscription": false,
+                "genre": "Intimité guidée",
+                "about": {
+                    "@id": "https://caresse.app/demo/#app"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Studio Mokuton",
+                    "url": "https://mokuton.studio/"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+                "@type": "AudioObject",
+                "@id": "https://caresse.app/demo/#demo-couple-ff",
+                "name": "Démo Caresse en couple lesbien : Noémie & Sarah, ambiance nature",
+                "description": "Extrait d'une expérience audio Caresse pour couple de deux femmes, dont la version complète dure 31 minutes. Voix féminine, ambiance nature, massage sensuel et guidance alternée entre les deux partenaires. Dans l'app, une expérience dure en général entre 25 et 35 minutes selon la génération.",
+                "contentUrl": "https://caresse.app/demos/couple_fr_noemie_sarah_test.mp3",
+                "encodingFormat": "audio/mpeg",
+                "duration": "PT4M47S",
+                "inLanguage": "fr",
+                "isFamilyFriendly": false,
+                "isAccessibleForFree": true,
+                "requiresSubscription": false,
+                "genre": "Intimité guidée",
+                "about": {
+                    "@id": "https://caresse.app/demo/#app"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Studio Mokuton",
+                    "url": "https://mokuton.studio/"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+                "@type": "AudioObject",
+                "@id": "https://caresse.app/demo/#demo-couple-hh",
+                "name": "Démo Caresse en couple gay : Hugo & Yoann, ambiance torride",
+                "description": "Extrait d'une expérience audio Caresse pour couple de deux hommes, dont la version complète dure 32 minutes. Voix féminine, chambre, ambiance torride, massage sensuel et guidance alternée entre les deux partenaires. Dans l'app, une expérience dure en général entre 25 et 35 minutes selon la génération.",
+                "contentUrl": "https://caresse.app/demos/couple_fr_hugo_yoann_test.mp3",
+                "encodingFormat": "audio/mpeg",
+                "duration": "PT4M49S",
+                "inLanguage": "fr",
+                "isFamilyFriendly": false,
+                "isAccessibleForFree": true,
+                "requiresSubscription": false,
+                "genre": "Intimité guidée",
+                "about": {
+                    "@id": "https://caresse.app/demo/#app"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Studio Mokuton",
+                    "url": "https://mokuton.studio/"
+                }
+            }
         }
-      ]
-    }
+    ]
+}
     </script>
     <script type="application/ld+json">
     {
@@ -337,7 +433,7 @@
 <body class="lang-fr">
 
     <header>
-        <a href="/" aria-label="Caresse, accueil"><img src="/caresse-logo.svg" class="logo" alt="Caresse, application audio intime guidée par l'IA"></a>
+        <a href="/" aria-label="Caresse, accueil"><img src="/caresse-logo.svg" class="logo" alt="Caresse, application audio intime guidée par l'IA" width="250" height="80"></a>
         <div class="header-right">
             <a href="/demo/" class="header-link active">Démo audio</a>
             <a href="/blog/" class="header-link">Blog</a>
@@ -371,11 +467,11 @@
                 <p class="kicker">Démo 1 · En solo, tout en douceur</p>
                 <h2>Manon, une première fois tout en douceur</h2>
                 <p class="what">Ce que cette démo permet d'entendre : le registre le plus doux de Caresse. Une voix qui suggère plus qu'elle ne décrit, attentive au souffle et au rythme, sans langage cru. C'est le bon point de départ si vous découvrez l'application. C'est un extrait : l'expérience complète dont il est tiré dure 26 minutes.</p>
-                <audio controls preload="none" src="/demos/solo_fr_manon_test.mp3" aria-label="Démo audio Caresse en solo, Manon, 4 minutes 17">
+                <audio controls preload="none" src="/demos/solo_fr_manon_test.mp3" aria-label="Démo audio Caresse en solo, Manon, 4 minutes 18">
                     Votre navigateur ne peut pas lire cet audio. <a href="/demos/solo_fr_manon_test.mp3">Téléchargez le fichier MP3</a>.
                 </audio>
                 <div class="demo-meta">
-                    <span>⏱ 4 min 17</span>
+                    <span>⏱ 4 min 18</span>
                     <span>🇫🇷 Français</span>
                     <span>🧍‍♀️ Solo féminin</span>
                     <span>🗣 Voix féminine</span>
@@ -418,8 +514,60 @@
                 </div>
             </article>
 
+
+            <article class="demo-card" id="demo-couple-joueur">
+                <p class="kicker">Démo 4 · En couple, torride et joueur</p>
+                <h2>Nicolas &amp; Jade, une soirée sans retenue</h2>
+                <p class="what">Ce que cette démo permet d'entendre : une narration qui alterne entre deux partenaires, avec accessoires et jeu de rôle léger. Ambiance torride, langage direct. C'est un extrait : l'expérience complète dont il est tiré dure 32 minutes.</p>
+                <audio controls preload="none" src="/demos/couple_fr_nicolas_jade_test.mp3" aria-label="Démo audio Caresse en couple, Nicolas et Jade, 4m 50s">
+                    Votre navigateur ne peut pas lire cet audio. <a href="/demos/couple_fr_nicolas_jade_test.mp3">Téléchargez le fichier MP3</a>.
+                </audio>
+                <div class="demo-meta">
+                    <span>⏱ 4 min 50</span>
+                    <span>🇫🇷 Français</span>
+                    <span>💑 Duo H/F</span>
+                    <span>🗣 Voix féminine</span>
+                    <span>🔥 Ambiance torride</span>
+                    <span class="intense">Intensité : explicite</span>
+                </div>
+            </article>
+
+            <article class="demo-card" id="demo-couple-ff">
+                <p class="kicker">Démo 5 · En couple, deux femmes</p>
+                <h2>Noémie &amp; Sarah, au grand air</h2>
+                <p class="what">Ce que cette démo permet d'entendre : une narration adressée à deux femmes, prénoms prononcés, guidance alternée. Ambiance nature, massage sensuel, langage direct. C'est un extrait : l'expérience complète dont il est tiré dure 31 minutes.</p>
+                <audio controls preload="none" src="/demos/couple_fr_noemie_sarah_test.mp3" aria-label="Démo audio Caresse en couple, Noémie et Sarah, 4m 47s">
+                    Votre navigateur ne peut pas lire cet audio. <a href="/demos/couple_fr_noemie_sarah_test.mp3">Téléchargez le fichier MP3</a>.
+                </audio>
+                <div class="demo-meta">
+                    <span>⏱ 4 min 47</span>
+                    <span>🇫🇷 Français</span>
+                    <span>👩‍❤️‍👩 Duo F/F</span>
+                    <span>🗣 Voix féminine</span>
+                    <span>🌿 Ambiance nature</span>
+                    <span class="intense">Intensité : explicite</span>
+                </div>
+            </article>
+
+            <article class="demo-card" id="demo-couple-hh">
+                <p class="kicker">Démo 6 · En couple, deux hommes</p>
+                <h2>Hugo &amp; Yoann, une nuit à deux</h2>
+                <p class="what">Ce que cette démo permet d'entendre : une narration adressée à deux hommes, portée par une voix féminine. Ambiance torride, massage sensuel, langage direct. C'est un extrait : l'expérience complète dont il est tiré dure 32 minutes.</p>
+                <audio controls preload="none" src="/demos/couple_fr_hugo_yoann_test.mp3" aria-label="Démo audio Caresse en couple, Hugo et Yoann, 4m 49s">
+                    Votre navigateur ne peut pas lire cet audio. <a href="/demos/couple_fr_hugo_yoann_test.mp3">Téléchargez le fichier MP3</a>.
+                </audio>
+                <div class="demo-meta">
+                    <span>⏱ 4 min 49</span>
+                    <span>🇫🇷 Français</span>
+                    <span>👨‍❤️‍👨 Duo H/H</span>
+                    <span>🗣 Voix féminine</span>
+                    <span>🔥 Ambiance torride</span>
+                    <span class="intense">Intensité : explicite</span>
+                </div>
+            </article>
+
         </div>
-        <p class="players-note">Commencez par Manon si vous découvrez Caresse : c'est le registre le plus doux. Les deux autres extraits sont réglés sur le niveau le plus direct de l'application, pour montrer jusqu'où elle va. L'app propose encore d'autres lieux et d'autres ambiances. Les mêmes scénarios existent en <a href="/en/demo/">anglais</a> et en <a href="/es/demo/">espagnol</a>.</p>
+        <p class="players-note">Commencez par Manon si vous découvrez Caresse : c'est le registre le plus doux. Les cinq autres extraits sont réglés sur le niveau le plus direct de l'application, pour montrer jusqu'où elle va — en solo, en couple hétéro, entre deux femmes ou entre deux hommes. L'app propose encore d'autres lieux et d'autres ambiances. Les mêmes scénarios existent en <a href="/en/demo/">anglais</a> et en <a href="/es/demo/">espagnol</a>.</p>
     </section>
 
     <!-- DIFFERENCE -->
@@ -433,7 +581,7 @@
                 <h3>La démo</h3>
                 <ul>
                     <li>Pré-générée une fois, servie à l'identique à tout le monde</li>
-                    <li>Prénoms imposés : Mathieu, Clara, Inès</li>
+                    <li>Prénoms imposés, choisis pour la démo</li>
                     <li>Extrait figé d'un peu plus de quatre minutes</li>
                     <li>Un seul lieu, une seule ambiance, un seul niveau d'intensité</li>
                     <li>Sert à entendre la voix, le ton et la mécanique</li>
@@ -559,7 +707,7 @@
     </section>
 
     <footer>
-        <a href="/" aria-label="Caresse, accueil"><img src="/caresse-logo.svg" style="height:28px;" alt="Caresse"></a>
+        <a href="/" aria-label="Caresse, accueil"><img src="/caresse-logo.svg" style="height:28px;" alt="Caresse" width="250" height="80"></a>
         <nav aria-label="Cas d'usage" style="display:flex;gap:6px 16px;flex-wrap:wrap;justify-content:center;max-width:720px;">
             <a href="/demo/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;">Démo audio</a>
             <a href="/blog/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;">Blog</a>

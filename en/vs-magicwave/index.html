@@ -99,14 +99,6 @@
             "@type": "Answer",
             "text": "Not in the same sense. MagicWave offers thousands of full-cast audiobooks, written in advance, across varied genres (romance, fantasy, werewolf, vampire). Caresse doesn't offer a catalog to browse: every session is generated on demand from your intimate profile. You never replay the same thing, and you're never waiting on a release schedule."
           }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I try Caresse without committing?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Caresse is free to download on iOS and Android, and the first discovery session is included. No signup beyond an alias. Your real data stays yours."
-          }
         }
       ]
     }
@@ -288,7 +280,7 @@
 <body class="lang-en">
 
     <header>
-        <a href="/en/" aria-label="Caresse — home"><img src="/caresse-logo.svg" class="logo" alt="Caresse, AI-guided intimate audio app"></a>
+        <a href="/en/" aria-label="Caresse — home"><img src="/caresse-logo.svg" class="logo" alt="Caresse, AI-guided intimate audio app" width="250" height="80"></a>
         <div class="header-right">
             <a href="/en/blog/" class="header-link">Blog</a>
             <a href="/en/how-it-works/" class="header-link">How it works</a>
@@ -312,7 +304,7 @@
         <h1>Caresse vs MagicWave:<br>listen first, <em>decide later.</em></h1>
         <p>MagicWave offers a library of full-cast romance audiobooks, English only, designed for individual listening. Caresse takes a different path: dozens of real audio demos you can play right now — no sign-up, no account, no email — in English, French and Spanish. Then a bespoke ritual that calls you by name, solo or as a couple.</p>
         <div class="cta-group">
-            <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-cta" class="cta-pink" target="_blank" rel="noopener">Listen to free demos</a>
+            <a href="/en/demo/" id="hero-cta-demo" class="cta-pink">Listen to free demos</a>
             <a href="#verdict" class="cta-ghost">See the verdict</a>
         </div>
         <p class="hero-badge">Audio in English, French, Spanish · No account, no email · iOS & Android</p>
@@ -574,6 +566,7 @@
                 <p class="ttl">Caresse vs InTheMoment</p>
                 <p class="desc">Comparing AI approaches: curated prompts vs raw generation.</p>
             </a>
+            <a href="/en/vs-quinn/" class="related-card"><div class="icon">🆚</div><p class="ttl">Caresse vs Quinn</p><p class="desc">Creator-led audio catalog vs a session generated with your names.</p></a>
             <a href="/en/alternatives/" class="related-card">
                 <div class="icon">🧭</div>
                 <p class="ttl">All alternatives</p>
@@ -594,7 +587,7 @@
     </section>
 
     <footer>
-        <a href="/en/" aria-label="Caresse — home"><img src="/caresse-logo.svg" style="height:28px;" alt="Caresse"></a>
+        <a href="/en/" aria-label="Caresse — home"><img src="/caresse-logo.svg" style="height:28px;" alt="Caresse" width="250" height="80"></a>
         <nav aria-label="Use cases" style="display:flex;gap:6px 16px;flex-wrap:wrap;justify-content:center;max-width:720px;">
             <a href="/en/demo/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;transition:0.2s;" onmouseover="this.style.color='var(--primary)';this.style.background='rgba(93,61,140,0.06)'" onmouseout="this.style.color='var(--text-secondary)';this.style.background='transparent'"><span class="inline">Audio demo</span></a>
             <a href="/en/blog/" style="color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:500;padding:4px 8px;border-radius:6px;">Blog</a>
@@ -630,13 +623,6 @@
         </div>
         <p class="footer-copy">© 2026 <a href="https://mokuton.studio/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.7;">Studio Mokuton</a>, Caresse · 18+ Adults only</p>
     </footer>
-    <script>
-        (function () {
-            if (/Android/i.test(navigator.userAgent)) {
-                var cta = document.getElementById('hero-cta');
-                if (cta) cta.href = "https://play.google.com/store/apps/details?id=com.flareai.caresse";
-            }
-        })();
-    </script>
+
 </body>
 </html>
