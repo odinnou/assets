@@ -78,10 +78,10 @@
         },
         {
           "@type": "Question",
-          "name": "¿Qué alternativa elegir si busco contenido en español?",
+          "name": "¿Qué alternativa elegir si busco contenido en francés o en español?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Entre las aplicaciones comparadas en esta página, Caresse es la única que ofrece audio nativo en español, con demos y sesiones a medida sin necesidad de crear una cuenta. Melt también cubre el español, pero en texto (verificado el 17 de agosto de 2026)."
+            "text": "En francés, entre las aplicaciones comparadas aquí, existen tres opciones: Melba (catálogo de audio FR + EN), Melt (texto, 5 idiomas) y Caresse (audio FR, EN, ES). Melba exige una cuenta y una configuración de preferencias íntimas. Caresse genera un guion único con vuestros nombres, sin cuenta, sin configuración previa. En español, entre las apps comparadas aquí, Caresse es la única que ofrece audio nativo (Melt cubre el español, pero en texto)."
           }
         },
         {
@@ -169,7 +169,7 @@
         .featured-card .cta:hover { background: var(--primary-vibrant); transform: translateY(-2px); }
 
         .matrix { background: var(--grad-soft); }
-        .matrix-wrap { max-width: 1100px; margin: 0 auto; overflow-x: auto; }
+        .matrix-wrap { max-width: 1100px; margin: 0 auto; overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-inline: contain; }
         .matrix-table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--surface); border-radius: 20px; overflow: hidden; border: 1px solid rgba(158,123,181,0.16); font-size: 0.92rem; }
         .matrix-table th, .matrix-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid rgba(158,123,181,0.10); vertical-align: top; }
         .matrix-table tr:last-child th, .matrix-table tr:last-child td { border-bottom: none; }
@@ -394,7 +394,7 @@
         <div class="verified-banner">
             <strong>Información verificada el 17 de agosto de 2026</strong> a partir de las fichas de la App Store y de los sitios oficiales de cada editor (fuentes listadas debajo de la tabla). Las tarifas se han recogido en la ficha francesa de la App Store, en la divisa de la tienda, sin conversión. Los precios de las tiendas varían según el país y el periodo promocional: comprueba siempre tu propia ficha antes de comprar. Cuando un editor no publica un dato, se marca como <span class="unverified">no verificado</span> en lugar de suponerlo.
         </div>
-        <div class="matrix-wrap">
+        <div class="matrix-wrap" tabindex="0" role="region" aria-label="Tabla comparativa de aplicaciones">
             <table class="matrix-table">
                 <thead>
                     <tr>
@@ -443,6 +443,15 @@
                         <td class="no">No</td>
                         <td>EN<span class="src">App Store: «English»</span></td>
                         <td>77,99 €/año · 14,49 €/mes<span class="src">Compras integradas App Store</span></td>
+                    </tr>
+                    <tr>
+                        <td class="app-name"><a href="/es/vs-quinn/">Quinn</a></td>
+                        <td>Muestras disponibles</td>
+                        <td class="no">Cuenta y suscripción obligatorias para acceso ilimitado</td>
+                        <td>Audio erótico de creadores</td>
+                        <td class="no">No</td>
+                        <td>EN<span class="src">Sitio oficial de Quinn</span></td>
+                        <td>7,99 $/mes · 59,99 $/año<span class="src">Sitio oficial, verificado el 28 de agosto de 2026</span></td>
                     </tr>
                     <tr>
                         <td class="app-name">InTheMoment</td>
