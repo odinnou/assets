@@ -573,6 +573,14 @@
         <p class="players-note">Empieza por Elena si acabas de descubrir Caresse: es el registro más suave. Los otros cinco extractos están ajustados al nivel más directo de la aplicación, para mostrar hasta dónde llega: en solitario, en pareja heterosexual, entre dos mujeres o entre dos hombres. La app ofrece además otros lugares y otros ambientes. Los mismos escenarios existen en <a href="/demo/">francés</a> y en <a href="/en/demo/">inglés</a>.</p>
     </section>
 
+    <!-- POST-LISTEN CTA -->
+    <section class="post-listen-cta" style="padding:56px 5% 64px;text-align:center;">
+        <h2 class="section-title" style="margin-bottom:12px;">Ya lo has escuchado. Ahora te toca a ti.</h2>
+        <p class="section-sub" style="margin:0 auto 26px;">Estos extractos son grabaciones fijas. En la aplicación, cada sesión se genera para ti, con vuestros nombres, vuestro lugar y vuestro ambiente. Sin cuenta, sin correo, sin suscripción.</p>
+        <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="post-listen-store-cta" class="hero-store-cta" style="display:inline-block;margin-top:0;" target="_blank" rel="noopener noreferrer">Descargar la aplicación gratis</a>
+        <p class="age-notice" style="margin-top:16px;font-size:0.85rem;color:var(--text-secondary);">🔞 Solo para adultos mayores de 18 años</p>
+    </section>
+
     <!-- DIFFERENCE -->
     <section class="difference" id="diferencia">
         <p class="section-label">Importante</p>
@@ -766,6 +774,6 @@
             });
         });
     </script>
-    <script>(function(){if (/Android/i.test(navigator.userAgent)) { var cta = document.getElementById('hero-store-cta'); if (cta) cta.href = 'https://play.google.com/store/apps/details?id=com.flareai.caresse'; }})();</script>
+    <script>(function(){if (/Android/i.test(navigator.userAgent)) { var ids = ['hero-store-cta','post-listen-store-cta']; for (var i = 0; i < ids.length; i++) { var cta = document.getElementById(ids[i]); if (cta) cta.href = 'https://play.google.com/store/apps/details?id=com.flareai.caresse'; } }})();</script>
 </body>
 </html>
