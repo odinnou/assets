@@ -10,6 +10,19 @@ L’application se positionne comme une solution de **bien-être émotionnel et 
 
 ---
 
+## 🥇 Règle d'or du site — à lire avant toute modif SEO ou CTA
+
+Le site existe **uniquement** pour le reach SEO et les obligations légales des stores.
+Son objectif est d'obtenir des **installations d'app**. Le mouvement optimal : l'utilisateur
+arrive par une requête, et le **premier lien qu'il clique l'amène au store**.
+
+Le SEO amène sur le site ; sur le site, tout pousse vers le store. Le maillage interne se
+fait pour le crawler, jamais en CTA visible qui détourne l'utilisateur final.
+
+👉 Détail, invariants techniques et checklist : [`SEO-GOLDEN-RULE.md`](SEO-GOLDEN-RULE.md)
+
+---
+
 ## 🎯 Objectif produit
 
 - Offrir des expériences immersives personnalisées
