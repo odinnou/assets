@@ -276,7 +276,7 @@
         <h1>Looking for an alternative?<br>Listen before <em>opening an account.</em></h1>
         <p>If you're evaluating Melba, Coelle, Dipsea or InTheMoment, Caresse is worth the detour. Caresse offers dozens of audio demos you can play right now, no sign-up, no email, in English, French and Spanish. And among the apps compared here, it's the only one that runs 100% anonymously, payments included.</p>
         <div class="cta-group">
-            <a href="/en/demo/" id="hero-cta-demo" class="cta-pink">Listen to free demos</a>
+            <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-cta" class="cta-pink" target="_blank" rel="noopener noreferrer">Download Caresse for free</a>
             <a href="#matrix" class="cta-ghost">See the matrix</a>
             <a href="/en/demo/" class="cta-ghost">🎧 Listen to a real demo</a>
         </div>
@@ -692,5 +692,13 @@
         <p class="footer-copy">© 2026 <a href="https://mokuton.studio/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.7;">Studio Mokuton</a>, Caresse · 18+ Adults only</p>
     </footer>
 
+    <script>
+        (function () {
+            if (/Android/i.test(navigator.userAgent)) {
+                var cta = document.getElementById('hero-cta');
+                if (cta) cta.href = 'https://play.google.com/store/apps/details?id=com.flareai.caresse';
+            }
+        })();
+    </script>
 </body>
 </html>

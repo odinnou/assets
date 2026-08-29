@@ -334,6 +334,8 @@
         h1 { font-size: clamp(2.1rem, 5.2vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; background: var(--grad-pink); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; max-width: 900px; }
         .hero-lede { color: var(--text-secondary); font-size: clamp(1rem, 2vw, 1.18rem); max-width: 640px; }
         .hero-lede strong { color: var(--text-primary); font-weight: 700; }
+        .hero-store-cta { margin-top: 24px; background: var(--grad-pink); color: #fff; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 800; box-shadow: 0 10px 25px rgba(255,107,157,0.3); transition: 0.2s; }
+        .hero-store-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(255,107,157,0.4); }
 
         section { padding: 80px 5%; }
         .section-label { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--primary-vibrant); margin-bottom: 12px; text-align: center; }
@@ -456,6 +458,7 @@
         <p class="hero-eyebrow">🎧 Play instantly · No account · 18+</p>
         <h1>Listen to Caresse before <em>you download Caresse.</em></h1>
         <p class="hero-lede">No account. No email. <strong>Put your headphones on and start a demo.</strong></p>
+        <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-store-cta" class="hero-store-cta" target="_blank" rel="noopener noreferrer">Download the app for free</a>
     </section>
 
     <!-- PLAYERS -->
@@ -763,5 +766,6 @@
             });
         });
     </script>
+    <script>(function(){if (/Android/i.test(navigator.userAgent)) { var cta = document.getElementById('hero-store-cta'); if (cta) cta.href = 'https://play.google.com/store/apps/details?id=com.flareai.caresse'; }})();</script>
 </body>
 </html>

@@ -289,7 +289,7 @@
         <h1>Caresse vs MagicWave:<br>escucha antes de <em>decidir.</em></h1>
         <p>MagicWave ofrece una library de audiolibros románticos con reparto completo, solo en inglés, pensada para una escucha individual. Caresse toma un camino distinto: decenas de demos de audio reales jugables al instante, sin registro, sin cuenta, sin email, en francés, inglés y español. Después, un ritual a medida que te llama por tu nombre, en solitario o en pareja.</p>
         <div class="cta-group">
-            <a href="/es/demo/" id="hero-cta-demo" class="cta-pink">Escuchar las demos gratis</a>
+            <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-cta" class="cta-pink" target="_blank" rel="noopener noreferrer">Descargar Caresse gratis</a>
             <a href="#verdict" class="cta-ghost">Ver el veredicto</a>
         </div>
         <p class="hero-badge">Audio en francés, inglés, español · Sin cuenta, sin email · iOS y Android</p>
@@ -608,5 +608,13 @@
         <p class="footer-copy">© 2026 <a href="https://mokuton.studio/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.7;">Studio Mokuton</a>, Caresse · Solo mayores de 18 años</p>
     </footer>
 
+    <script>
+        (function () {
+            if (/Android/i.test(navigator.userAgent)) {
+                var cta = document.getElementById('hero-cta');
+                if (cta) cta.href = 'https://play.google.com/store/apps/details?id=com.flareai.caresse';
+            }
+        })();
+    </script>
 </body>
 </html>
