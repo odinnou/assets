@@ -303,7 +303,7 @@
         <h1>Caresse vs Coelle:<br>listen <em>without signing up.</em></h1>
         <p>Coelle requires account creation before you can try anything, then signs you up for a yearly subscription. Caresse takes the opposite path: dozens of real audio demos you can play right now — no sign-up, no email — in English, French and Spanish. If the quality speaks to you, you pay for the bespoke session you want. Anonymously, on demand, no commitment.</p>
         <div class="cta-group">
-            <a href="/en/demo/" id="hero-cta-demo" class="cta-pink">Listen to free demos</a>
+            <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-cta" class="cta-pink" target="_blank" rel="noopener">Listen to free demos</a>
             <a href="#verdict" class="cta-ghost">See the verdict</a>
         </div>
         <p class="hero-badge">Audio in English, French, Spanish · 100% anonymous use · No subscription</p>
@@ -638,6 +638,13 @@
         </div>
         <p class="footer-copy">© 2026 <a href="https://mokuton.studio/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.7;">Studio Mokuton</a>, Caresse · 18+ Adults only</p>
     </footer>
-
+    <script>
+        (function () {
+            if (/Android/i.test(navigator.userAgent)) {
+                var cta = document.getElementById('hero-cta');
+                if (cta) cta.href = "https://play.google.com/store/apps/details?id=com.flareai.caresse";
+            }
+        })();
+    </script>
 </body>
 </html>

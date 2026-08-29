@@ -321,7 +321,7 @@
         <h1>Caresse vs Melba:<br>listen first, <em>decide later.</em></h1>
         <p>Melba offers a catalog of pre-recorded audio experiences in French and English, validated by couple therapists. The app requires an account and a detailed onboarding where you fill in your intimate preferences before accessing any content. Caresse takes a different path: dozens of real audio demos you can play right now — no sign-up, no account, no email — so you hear the sound quality, the voice and the atmosphere before any decision. Then a bespoke ritual that calls you by name.</p>
         <div class="cta-group">
-            <a href="/en/demo/" id="hero-cta-demo" class="cta-pink">Listen to free demos</a>
+            <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-cta" class="cta-pink" target="_blank" rel="noopener">Listen to free demos</a>
             <a href="#verdict" class="cta-ghost">See the verdict</a>
         </div>
         <p class="hero-badge">Audio in English, French, Spanish · No account, no email · Android (iOS coming soon)</p>
@@ -654,6 +654,13 @@
         </div>
         <p class="footer-copy">© 2026 <a href="https://mokuton.studio/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.7;">Studio Mokuton</a>, Caresse · 18+ Adults only</p>
     </footer>
-
+    <script>
+        (function () {
+            if (/Android/i.test(navigator.userAgent)) {
+                var cta = document.getElementById('hero-cta');
+                if (cta) cta.href = "https://play.google.com/store/apps/details?id=com.flareai.caresse";
+            }
+        })();
+    </script>
 </body>
 </html>
