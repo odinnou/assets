@@ -6,6 +6,11 @@ lieu de `primarySeoTarget` déclaratif. Toute modification du maillage se réper
 
 ## Principe
 
+> ⚠️ Ce document décrit le maillage **pour le SEO**. Il est subordonné à
+> [`SEO-GOLDEN-RULE.md`](SEO-GOLDEN-RULE.md) : aucun lien décrit ici ne doit prendre la
+> forme d'un CTA visible concurrent du téléchargement. Le maillage sert le crawler,
+> pas le détournement de l'utilisateur final.
+
 Le graphe visé :
 
 ```
@@ -72,13 +77,13 @@ Règles :
 | Cible principale | `/for-couples/` |
 | Lien retour depuis | `/for-couples/` renvoie vers `/couples-game/` (déjà en place via le corps de page) |
 
-### Cluster « démo audio » (page de destination centrale)
+### Cluster « démo audio » (page d'atterrissage SEO)
 
 | | |
 |---|---|
 | Requête | démo audio couple, expérience audio couple, audio intime couple, guided intimacy audio, couples audio experience |
 | Page | `/demo/` · `/en/demo/` · `/es/demo/` (transactionnelle : écoute immédiate) |
-| Rôle | Destination unique de la promesse « écouter avant de s'inscrire », répétée jusqu'ici sur plusieurs pages sans URL propre |
+| Rôle | Page d'atterrissage SEO pour la promesse « écouter avant de s'inscrire ». **Pas une étape du tunnel** : `/demo/` porte ses propres CTA store et ne doit jamais être la cible d'un CTA visible depuis une page qui en porte déjà un (cf. `SEO-GOLDEN-RULE.md`). |
 | Liens entrants | Lien homepage sous la section vidéo, entrée de nav header (les 3 locales), un lien contextuel depuis `/couples-game/`, `/for-couples/` et `/for-solo-exploration/` (les 3 locales), et une entrée sitewide en tête du nav éditorial du footer (73 pages) |
 | Liens sortants | `/for-couples/`, `/for-solo-exploration/`, `/alternatives/`, `/is-caresse-safe/`, `/how-it-works/` |
 
