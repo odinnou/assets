@@ -337,7 +337,7 @@
         <h1>Caresse vs Melt:<br>hearing it <em>is not the same as reading it.</em></h1>
         <p>Melt generates personalized erotic text stories — no account needed, AI-driven, genuinely intimate. Caresse does the same thing but in audio: a synthesized voice speaks your names and narrates a 25–35 min scenario built from your profile. Reading an erotic story vs hearing one told for you — same concept, fundamentally different experience.</p>
         <div class="cta-group">
-            <a href="/en/demo/" id="hero-cta-demo" class="cta-pink">Listen to free demos</a>
+            <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-cta" class="cta-pink" target="_blank" rel="noopener">Listen to free demos</a>
             <a href="#verdict" class="cta-ghost">See the verdict</a>
         </div>
         <p class="hero-badge">Audio in French, English, Spanish · No account, no email · Android (iOS coming soon)</p>
@@ -677,6 +677,13 @@
         </div>
         <p class="footer-copy">© 2026 <a href="https://mokuton.studio/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.7;">Studio Mokuton</a>, Caresse · 18+ Adults only</p>
     </footer>
-
+    <script>
+        (function () {
+            if (/Android/i.test(navigator.userAgent)) {
+                var cta = document.getElementById('hero-cta');
+                if (cta) cta.href = "https://play.google.com/store/apps/details?id=com.flareai.caresse";
+            }
+        })();
+    </script>
 </body>
 </html>

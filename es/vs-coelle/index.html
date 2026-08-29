@@ -314,7 +314,7 @@
         <h1>Caresse vs Coelle:<br>escucha sin <em>crear una cuenta.</em></h1>
         <p>Coelle exige crear una cuenta antes de poder probar nada, y luego te suscribe al año. Caresse toma el camino contrario: decenas de demos de audio reales jugables al instante, sin registro, sin email, en francés, inglés y español. Si la calidad te convence, pagas la sesión a medida que quieras. De forma anónima, a demanda, sin compromiso.</p>
         <div class="cta-group">
-            <a href="/es/demo/" id="hero-cta-demo" class="cta-pink">Escuchar las demos gratis</a>
+            <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-cta" class="cta-pink" target="_blank" rel="noopener">Escuchar las demos gratis</a>
             <a href="#verdict" class="cta-ghost">Ver el veredicto</a>
         </div>
         <p class="hero-badge">Audio en francés, inglés, español · Uso 100 % anónimo · Sin suscripción</p>
@@ -647,6 +647,13 @@
         </div>
         <p class="footer-copy">© 2026 <a href="https://mokuton.studio/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.7;">Studio Mokuton</a>, Caresse · Solo mayores de 18 años</p>
     </footer>
-
+    <script>
+        (function () {
+            if (/Android/i.test(navigator.userAgent)) {
+                var cta = document.getElementById('hero-cta');
+                if (cta) cta.href = "https://play.google.com/store/apps/details?id=com.flareai.caresse";
+            }
+        })();
+    </script>
 </body>
 </html>

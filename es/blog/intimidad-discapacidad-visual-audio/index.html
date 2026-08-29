@@ -439,7 +439,8 @@
         <p class="kicker">En la práctica</p>
         <h2>Una sesión que se vive al oído.</h2>
         <p>Caresse genera una experiencia de audio personalizada que se desarrolla sin nada que leer ni mirar, en español, francés o inglés. Sin cuenta, sin correo y con una sesión de descubrimiento gratuita: lo suficiente para juzgar el formato por ti mismo en unos minutos.</p>
-        <a href="/es/for-blind-and-low-vision/" class="cta-pink">Ver la página dedicada</a>
+        <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-cta" class="cta-pink" target="_blank" rel="noopener">Descubrir Caresse</a>
+        <p class="secondary-link" style="margin-top:14px;font-size:0.92rem;"><a href="/es/for-blind-and-low-vision/" style="color:var(--text-secondary);text-decoration:underline;text-underline-offset:3px;">Ver la página dedicada a la accesibilidad</a></p>
         <p class="age-notice">🔞 Solo para adultos mayores de 18 años</p>
     </section>
 
@@ -514,6 +515,13 @@
         </div>
         <p class="footer-copy">© 2026 <a href="https://mokuton.studio/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.7;">Studio Mokuton</a>, Caresse · 18+ Solo adultos</p>
     </footer>
-
+    <script>
+        (function () {
+            if (/Android/i.test(navigator.userAgent)) {
+                var cta = document.getElementById('hero-cta');
+                if (cta) cta.href = "https://play.google.com/store/apps/details?id=com.flareai.caresse";
+            }
+        })();
+    </script>
 </body>
 </html>
