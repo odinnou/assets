@@ -2,6 +2,21 @@
     var source = document.querySelector('#hero-cta, #hero-store-cta, #demo-store-cta, #post-listen-store-cta');
     if (!source) return;
 
+    if (source.hasAttribute('data-store-auto')) {
+        var userAgent = navigator.userAgent || navigator.vendor || '';
+        var isAndroid = /Android/i.test(userAgent);
+        var isIOS = /iPhone|iPad|iPod/i.test(userAgent) ||
+            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+        if (isAndroid) {
+            source.href = 'https://play.google.com/store/apps/details?id=com.flareai.caresse';
+        } else if (!isIOS) {
+            return;
+        }
+
+        document.documentElement.classList.add('store-platform-known');
+    }
+
     var style = document.createElement('style');
     style.textContent = [
         '.mobile-store-cta{display:none}',

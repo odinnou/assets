@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-analytics-variant="bonded-direct-v1">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -354,11 +354,18 @@
 
         .footer-copy { color: #BBB; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
 
-        @media (max-width: 768px) { section { padding: 60px 5%; } }
+        .hero-adaptive-download { display: none; }
+        .hero-store-options { margin: 0; }
+        @media (max-width: 768px) {
+            section { padding: 60px 5%; }
+            html.store-platform-known .hero-adaptive-download { display: inline-flex; }
+            html.store-platform-known .hero-store-options { display: none; }
+        }
     </style>
     <!-- Umami Analytics -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="4a1be662-e78b-4d4e-8a5d-c5791756a46a" data-domains="caresse.app"></script>
     <script defer src="/umami-store-tracking.js"></script>
+    <script defer src="/mobile-store-cta.js"></script>
 </head>
 <body class="lang-fr">
 
@@ -385,8 +392,15 @@
         <h1>Caresse vs Bonded :<br><em>before, or during?</em></h1>
         <p class="hero-sub">Bonded is there to plan a scene in writing. But you have to reply at each step for it to move on, which makes it impractical in the heat of the moment. Caresse covers both: the planning, then a session that plays on its own, using your first names, without ever touching the screen.</p>
         <div class="cta-group">
-            <a href="#verdict" class="cta-ghost"><span class="inline">See the comparison</span> <span>↓</span></a>
-            <a href="#download" class="cta-pink"><span class="inline">Listen to a demo</span></a>
+            <a href="https://apps.apple.com/us/app/caresse/id6758887086" id="hero-cta" class="cta-pink hero-adaptive-download" data-store-auto data-cta-position="hero" target="_blank" rel="noopener"><span class="inline">Listen to a demo</span></a>
+        </div>
+        <div class="store-badges hero-store-options" aria-label="Download Caresse">
+            <a href="https://apps.apple.com/us/app/caresse/id6758887086" class="store-badge" data-cta-position="hero" aria-label="Download on the App Store" target="_blank" rel="noopener noreferrer">
+                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.flareai.caresse" class="store-badge gplay" data-cta-position="hero" aria-label="Get it on Google Play" target="_blank" rel="noopener noreferrer">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+            </a>
         </div>
     </section>
 
