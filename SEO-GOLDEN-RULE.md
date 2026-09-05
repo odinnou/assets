@@ -56,9 +56,9 @@ sans détourner un humain. Il n'a jamais sa place en CTA visible.
 
 À vérifier avant tout commit touchant un CTA :
 
-1. **Le CTA principal (`.cta-pink`) pointe vers le store**, en lien direct
-   (`https://apps.apple.com/...`) ou vers l'ancre `#download` qui porte les deux badges.
-   Jamais vers une page interne.
+1. **Le CTA principal (`.cta-pink`) pointe directement vers le store**
+   (`https://apps.apple.com/...` ou `https://play.google.com/...`). Il ne pointe jamais
+   vers une page interne ni vers l'ancre `#download`.
 2. **Pas de page de rebond** sur le chemin du CTA principal — ni `/download/`, ni `/demo/`,
    ni aucune autre. Chaque clic intermédiaire coûte des installs.
 3. **Toute page portant un `id="hero-cta"` embarque le script de bascule Android** en pied
