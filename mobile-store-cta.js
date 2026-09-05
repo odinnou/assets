@@ -2,19 +2,24 @@
     var source = document.querySelector('#hero-cta, #hero-store-cta, #demo-store-cta, #post-listen-store-cta');
     if (!source) return;
 
-    if (source.hasAttribute('data-store-auto')) {
+    var autoStoreLinks = document.querySelectorAll('a[data-store-auto]');
+    if (autoStoreLinks.length) {
         var userAgent = navigator.userAgent || navigator.vendor || '';
         var isAndroid = /Android/i.test(userAgent);
         var isIOS = /iPhone|iPad|iPod/i.test(userAgent) ||
             (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
         if (isAndroid) {
-            source.href = 'https://play.google.com/store/apps/details?id=com.flareai.caresse';
-        } else if (!isIOS) {
-            return;
+            Array.prototype.forEach.call(autoStoreLinks, function (link) {
+                link.href = 'https://play.google.com/store/apps/details?id=com.flareai.caresse';
+            });
         }
 
-        document.documentElement.classList.add('store-platform-known');
+        if (isAndroid || isIOS) {
+            document.documentElement.classList.add('store-platform-known');
+        } else if (source.hasAttribute('data-store-auto')) {
+            return;
+        }
     }
 
     var style = document.createElement('style');
@@ -48,8 +53,9 @@
 
     var sourceVisible = true;
     var footerVisible = false;
+    var visibleInlineLinks = [];
     function updateSticky() {
-        var visible = !sourceVisible && !footerVisible;
+        var visible = !sourceVisible && !footerVisible && visibleInlineLinks.length === 0;
         sticky.classList.toggle('is-visible', visible);
         sticky.setAttribute('aria-hidden', visible ? 'false' : 'true');
     }
@@ -58,6 +64,18 @@
         sourceVisible = entries[0].isIntersecting;
         updateSticky();
     }).observe(source);
+
+    Array.prototype.forEach.call(document.querySelectorAll('a[data-cta-position="inline"]'), function (inlineLink) {
+        new IntersectionObserver(function (entries) {
+            var index = visibleInlineLinks.indexOf(inlineLink);
+            if (entries[0].isIntersecting && index === -1) {
+                visibleInlineLinks.push(inlineLink);
+            } else if (!entries[0].isIntersecting && index !== -1) {
+                visibleInlineLinks.splice(index, 1);
+            }
+            updateSticky();
+        }).observe(inlineLink);
+    });
 
     var footer = document.querySelector('footer');
     if (footer) {
